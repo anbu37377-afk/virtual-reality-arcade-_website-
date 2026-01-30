@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | VR Arcade</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="d-flex align-items-center justify-content-center min-vh-100 bg-body-tertiary">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5 col-lg-4">
+
+                <!-- Centered Auth Branding -->
+                <div class="text-center mb-4">
+                    <a href="index.html" class="navbar-brand fs-1 d-inline-block text-decoration-none">
+                        <i class="bi bi-headset-vr"></i> VR <span>ARCADE</span>
+                    </a>
+                </div>
+
+                <div class="card border-0 shadow-lg bg-dark">
+                    <div class="card-body p-5">
+                        <h2 class="h4 mb-4 text-center fw-bold">Create Account</h2>
+
+                        <form action="dashboard.html">
+                            <div class="mb-3">
+                                <label for="name" class="form-label text-muted small">Full Name</label>
+                                <input type="text" class="form-control bg-black border-secondary text-white" id="name"
+                                    placeholder="John Doe" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label text-muted small">Email Address</label>
+                                <input type="email" class="form-control bg-black border-secondary text-white" id="email"
+                                    placeholder="name@example.com" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="password" class="form-label text-muted small">Password</label>
+                                <input type="password" class="form-control bg-black border-secondary text-white"
+                                    id="password" placeholder="••••••••" required>
+                            </div>
+
+                            <div class="mb-4 small">
+                                <div class="form-check">
+                                    <input class="form-check-input bg-black border-secondary" type="checkbox" id="terms"
+                                        required>
+                                    <label class="form-check-label text-muted" for="terms">I agree to the <a href="#"
+                                            class="text-primary text-decoration-none">Terms & Conditions</a></label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100 py-2 fw-bold mb-3">Sign Up</button>
+
+                            <div class="text-center text-muted small mb-3 position-relative">
+                                <hr class="border-secondary opacity-50">
+                                <span
+                                    class="bg-dark px-2 position-absolute top-50 start-50 translate-middle text-uppercase">or</span>
+                            </div>
+
+                            <div class="d-grid gap-2 mb-4">
+                                <button type="button"
+                                    class="btn btn-outline-light d-flex align-items-center justify-content-center gap-2">
+                                    <i class="bi bi-google"></i> Continue with Google
+                                </button>
+                                <button type="button"
+                                    class="btn btn-primary d-flex align-items-center justify-content-center gap-2"
+                                    style="background-color: #1877F2; border-color: #1877F2;">
+                                    <i class="bi bi-facebook"></i> Continue with Facebook
+                                </button>
+                            </div>
+
+                            <div class="text-center text-muted small">
+                                Already have an account? <a href="login.html"
+                                    class="text-primary text-decoration-none">Login</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4 text-muted small">
+                    &copy; 2026 VR Arcade. All rights reserved.
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

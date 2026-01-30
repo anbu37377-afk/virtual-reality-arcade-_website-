@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | VR Arcade</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER (Same as Index) -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi bi-headset-vr"></i> VR <span>ARCADE</span>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar">
+                    <i class="bi bi-list fs-1 text-white"></i>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                    <div class="offcanvas-header border-bottom border-secondary">
+                        <h5 class="offcanvas-title">VR ARCADE MENU</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+
+                        </ul>
+                        <div class="d-lg-none mobile-auth-buttons">
+                            <a href="login.html" class="btn btn-secondary w-100 mb-2">Login</a>
+                            <a href="register.html" class="btn btn-primary w-100">Sign Up</a>
+                        </div>
+                        <div class="d-flex align-items-center mt-3 mt-lg-0">
+                            <button id="theme-toggle" class="me-3"><i class="bi bi-sun-fill"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="auth-buttons-desktop d-none d-lg-flex">
+                    <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+                    <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <!-- Page Header -->
+        <section class="py-5 mt-5 position-relative overflow-hidden"
+            style="background: linear-gradient(rgba(11, 12, 21, 0.8), rgba(11, 12, 21, 0.8)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center;">
+            <div class="container py-5 text-center position-relative z-2">
+                <div
+                    class="d-inline-block bg-primary px-3 py-1 rounded-pill mb-3 text-white small fw-bold letter-spacing-2">
+                    EXPERIENCES</div>
+                <h1 class="display-3 fw-bold text-white mb-3">Our VR Services</h1>
+                <p class="lead text-white-50 mx-auto" style="max-width: 600px;">Choose your reality. From solo
+                    adventures to multiplayer chaos.</p>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Service 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm overflow-hidden service-card">
+                            <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=2078&auto=format&fit=crop"
+                                class="card-img-top" alt="VR Gaming Station" style="height: 250px; object-fit: cover;">
+                            <div class="card-body p-4">
+                                <span class="badge bg-primary mb-2">Popular</span>
+                                <h3 class="h4 card-title">Solo VR Station</h3>
+                                <p class="card-text text-muted">A private booth equipped with the latest headset and
+                                    haptic feedback gear. Perfect for immersive solo campaigns.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <span class="fs-5 fw-bold text-primary">$20/hr</span>
+                                    <div>
+                                        <a href="service-details.html"
+                                            class="btn btn-sm btn-outline-light me-2">Details</a>
+                                        <a href="pricing.html" class="btn btn-sm btn-primary">Book Slot</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm overflow-hidden service-card">
+                            <img src="https://images.unsplash.com/photo-1617802690992-15d93263d3a9?q=80&w=2070&auto=format&fit=crop"
+                                class="card-img-top" alt="Multiplayer Arena" style="height: 250px; object-fit: cover;">
+                            <div class="card-body p-4">
+                                <span class="badge bg-secondary mb-2 text-dark">Multiplayer</span>
+                                <h3 class="h4 card-title">Free Roam Arena</h3>
+                                <p class="card-text text-muted">Untethered VR experience for up to 6 players. Move
+                                    freely in a large open space while battling zombies or solving puzzles.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <span class="fs-5 fw-bold text-primary">$35/hr</span>
+                                    <div>
+                                        <a href="service-details.html"
+                                            class="btn btn-sm btn-outline-light me-2">Details</a>
+                                        <a href="pricing.html" class="btn btn-sm btn-primary">Book Slot</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm overflow-hidden service-card">
+                            <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=2070&auto=format&fit=crop"
+                                class="card-img-top" alt="VR Racing" style="height: 250px; object-fit: cover;">
+                            <div class="card-body p-4">
+                                <span class="badge bg-info text-dark mb-2">Simulation</span>
+                                <h3 class="h4 card-title">VR Racing Sim</h3>
+                                <p class="card-text text-muted">Feel every turn and bump with our full-motion racing
+                                    simulators. Available for solo time trials or stored races.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <span class="fs-5 fw-bold text-primary">$25/hr</span>
+                                    <div>
+                                        <a href="service-details.html"
+                                            class="btn btn-sm btn-outline-light me-2">Details</a>
+                                        <a href="pricing.html" class="btn btn-sm btn-primary">Book Slot</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm overflow-hidden service-card">
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop"
+                                class="card-img-top" alt="VR Escape Room" style="height: 250px; object-fit: cover;">
+                            <div class="card-body p-4">
+                                <span class="badge bg-warning text-dark mb-2">Team Building</span>
+                                <h3 class="h4 card-title">VR Escape Room</h3>
+                                <p class="card-text text-muted">Work together to solve mysteries and escape virtual
+                                    worlds within 60 minutes. Great for friends and corporate teams.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <span class="fs-5 fw-bold text-primary">$30/pax</span>
+                                    <div>
+                                        <a href="service-details.html"
+                                            class="btn btn-sm btn-outline-light me-2">Details</a>
+                                        <a href="pricing.html" class="btn btn-sm btn-primary">Book Slot</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm overflow-hidden service-card">
+                            <img src="https://images.unsplash.com/photo-1592478411213-61535fddbadf?q=80&w=2070&auto=format&fit=crop"
+                                class="card-img-top" alt="Kids VR" style="height: 250px; object-fit: cover;">
+                            <div class="card-body p-4">
+                                <span class="badge bg-success mb-2">Kids Friendly</span>
+                                <h3 class="h4 card-title">Junior VR Zone</h3>
+                                <p class="card-text text-muted">Safe, gentle, and fun VR experiences curated
+                                    specifically for children aged 8-12. Parent monitoring screen included.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <span class="fs-5 fw-bold text-primary">$15/hr</span>
+                                    <div>
+                                        <a href="service-details.html"
+                                            class="btn btn-sm btn-outline-light me-2">Details</a>
+                                        <a href="pricing.html" class="btn btn-sm btn-primary">Book Slot</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm overflow-hidden service-card">
+                            <img src="https://images.unsplash.com/photo-1535295972055-1c762f4483e5?q=80&w=1887&auto=format&fit=crop"
+                                class="card-img-top" alt="Party Package" style="height: 250px; object-fit: cover;">
+                            <div class="card-body p-4">
+                                <span class="badge bg-danger mb-2">Event</span>
+                                <h3 class="h4 card-title">Party Packages</h3>
+                                <p class="card-text text-muted">Book the entire arcade for birthdays or private events.
+                                    Includes catering options and dedicated staff.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <span class="fs-5 fw-bold text-primary">Custom</span>
+                                    <div>
+                                        <a href="service-details.html"
+                                            class="btn btn-sm btn-outline-light me-2">Details</a>
+                                        <a href="contact.html" class="btn btn-sm btn-primary">Inquire</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 1: STATS COUNTER -->
+        <section class="py-5 bg-dark">
+            <div class="container py-4">
+                <div class="row g-4 text-center">
+                    <div class="col-md-3 col-6">
+                        <div class="p-4 rounded-4 bg-white bg-opacity-5 hover-scale reveal">
+                            <h2 class="display-4 fw-bold text-primary mb-0">50+</h2>
+                            <p class="text-muted text-uppercase small letter-spacing-2 mt-2">VR Experiences</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="p-4 rounded-4 bg-white bg-opacity-5 hover-scale reveal reveal-delay-100">
+                            <h2 class="display-4 fw-bold text-secondary mb-0">10k+</h2>
+                            <p class="text-muted text-uppercase small letter-spacing-2 mt-2">Happy Players</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="p-4 rounded-4 bg-white bg-opacity-5 hover-scale reveal reveal-delay-200">
+                            <h2 class="display-4 fw-bold text-success mb-0">20</h2>
+                            <p class="text-muted text-uppercase small letter-spacing-2 mt-2">VR Stations</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="p-4 rounded-4 bg-white bg-opacity-5 hover-scale reveal reveal-delay-300">
+                            <h2 class="display-4 fw-bold text-warning mb-0">4.9</h2>
+                            <p class="text-muted text-uppercase small letter-spacing-2 mt-2">Star Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 2: SAFETY STANDARDS -->
+        <section class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5 reveal">
+                    <i class="bi bi-shield-check display-3 text-primary mb-3"></i>
+                    <h2 class="fw-bold">Safety & Hygiene First</h2>
+                    <p class="text-muted">We ensure a clean and safe environment for every session.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="text-center p-4 reveal hover-scale">
+                            <div class="mb-3 text-secondary"><i class="bi bi-stars fs-1"></i></div>
+                            <h4 class="h5 fw-bold">UV Sanitization</h4>
+                            <p class="text-muted small">All headsets and controllers are sanitized with hospital-grade
+                                UV light between sessions.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center p-4 reveal reveal-delay-100 hover-scale">
+                            <div class="mb-3 text-secondary"><i class="bi bi-people fs-1"></i></div>
+                            <h4 class="h5 fw-bold">Staff Assistance</h4>
+                            <p class="text-muted small">Experienced game masters monitor every player to prevent
+                                collisions and assist with setup.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center p-4 reveal reveal-delay-200 hover-scale">
+                            <div class="mb-3 text-secondary"><i class="bi bi-box-seam fs-1"></i></div>
+                            <h4 class="h5 fw-bold">Padded Arenas</h4>
+                            <p class="text-muted small">Our free-roam zones use foam walls and soft flooring to ensure
+                                safe movement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 3: CORPORATE CTA -->
+        <section class="py-5 mt-4">
+            <div class="container">
+                <div class="position-relative rounded-5 overflow-hidden p-5 text-center reveal shadow-lg"
+                    style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center;">
+                    <div class="py-lg-4 position-relative z-2">
+                        <span class="text-warning fw-bold text-uppercase mb-2 d-block">Team Building</span>
+                        <h2 class="display-4 fw-bold text-white mb-4">Host Your Next Event</h2>
+                        <p class="lead text-white-50 mb-4 mx-auto" style="max-width: 700px;">
+                            From office parties to birthday bashes, book the entire arcade for an unforgettable
+                            experience.
+                            Catering and custom tournament brackets available.
+                        </p>
+                        <a href="contact.html"
+                            class="btn btn-warning btn-lg px-5 py-3 rounded-pill fw-bold text-dark">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   <footer>
+        <div class="container">
+            <div class="row g-4">
+                <!-- Column 1: Brand -->
+                <div class="col-lg-4 col-md-6 text-center text-md-start">
+                    <a href="index.html" class="footer-brand">
+                        <i class="bi bi-headset-vr"></i> VR ARCADE
+                    </a>
+                    <p class="small text-muted mb-4">
+                        Bringing the future of entertainment to your doorstep. Experience VR like never before.
+                    </p>
+                    <div class="footer-social justify-content-center justify-content-md-start">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Company -->
+                <div class="col-lg-2 col-md-6 col-6 footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="pricing.html">Pricing Plans</a></li>
+                        <li><a href="blog.html">News & Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Support -->
+                <div class="col-lg-2 col-md-6 col-6 footer-links">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="service-details.html">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="col-lg-4 col-md-6 footer-links">
+                    <h5>Newsletter</h5>
+                    <p class="small text-muted">Subscribe to get the latest updates and offers.</p>
+                    <form action="#" class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-4 border-top border-secondary">
+                <div class="col-12 text-center text-muted small">
+                    <p class="mb-0">© <span id="year">2026</span> VR Arcade. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Use same footer logic as index ideally, but simplifying for code block length -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
