@@ -12,70 +12,116 @@
 
 <body>
 
-    <!-- HEADER -->
+    <!-- ==================== HEADER ==================== -->
     <header>
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
+                <!-- 1. Logo + Brand Name -->
                 <a class="navbar-brand" href="index.html">
-                    <i class="bi bi-headset-vr"></i> VR <span>ARCADE</span>
+                    <i class="bi bi-headset-vr text-gradient"></i>
+                    VR <span>ARCADE</span>
                 </a>
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar">
-                    <i class="bi bi-list fs-1 text-white"></i>
+
+                <!-- 2. Desktop Navigation (Centered) -->
+                <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
+                    <ul class="desktop-nav">
+                        <li><a class="nav-link" href="index.html">Home</a></li>
+                        <li><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li><a class="nav-link" href="about.html">About</a></li>
+                        <li><a class="nav-link" href="services.html">Services</a></li>
+                        <li><a class="nav-link active" href="pricing.html">Pricing</a></li>
+                        <li><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <!-- 3. Desktop Actions (Right) -->
+                <div class="d-none d-lg-flex desktop-actions">
+                    <button class="theme-switch-desktop" title="Toggle Theme">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-login">Login</a>
+                    <a href="register.html" class="btn btn-primary">Sign Up</a>
+                </div>
+
+                <!-- 4. Anti-Gravity Floating Trigger (Mobile Only) -->
+                <button class="navbar-toggler antigravity-menu-trigger border-0 d-lg-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="bi bi-list"></i>
                 </button>
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
-                    <div
-                        class="offcanvas-header border-bottom border-white border-opacity-10 justify-content-between align-items-center">
-                        <h5 class="offcanvas-title font-monospace text-white">VR ARCADE</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+
+                <!-- 5. Anti-Gravity Floating Panel (Shared for Mobile/Tablet) -->
+                <div class="offcanvas offcanvas-end antigravity-panel" tabindex="-1" id="offcanvasNavbar"
+                    data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header justify-content-between align-items-center">
+                        <h5 class="offcanvas-title font-monospace text-gradient" id="offcanvasNavbarLabel">COMMAND
+                            CENTER</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
                     </div>
+
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
-                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                            <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                        <!-- Futuristic Navigation -->
+                        <ul class="antigravity-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="home-2.html">Home 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-primary" href="dashboard.html">
+                                    <i class="bi bi-cpu-fill me-2"></i>Dashboard
+                                </a>
+                            </li>
                         </ul>
 
-                        <!-- Mobile Bottom Actions -->
-                        <div class="d-lg-none mobile-bottom-actions">
-                            <div class="theme-toggle-row" id="theme-toggle-mobile">
-                                <i class="bi bi-sun-fill"></i>
-                                <span>Dark Mode</span>
+                        <!-- Anti-Gravity Footer (Theme + Auth) -->
+                        <div class="antigravity-footer">
+                            <div class="theme-switchers-group">
+                                <button class="theme-switch-btn" id="theme-light-btn">
+                                    <i class="bi bi-sun-fill"></i> Light
+                                </button>
+                                <button class="theme-switch-btn" id="theme-dark-btn">
+                                    <i class="bi bi-moon-stars-fill"></i> Dark
+                                </button>
                             </div>
-                            <div class="mobile-auth-buttons">
-                                <a href="login.html" class="btn btn-mobile-login">Login</a>
-                                <a href="register.html" class="btn btn-mobile-signup">Sign Up</a>
-                            </div>
-                        </div>
 
-                        <!-- Desktop Theme Toggle -->
-                        <div class="d-none d-lg-flex align-items-center ms-lg-3">
-                            <button id="theme-toggle" class="btn btn-link nav-link p-0 border-0" title="Toggle Theme">
-                                <i class="bi bi-sun-fill"></i>
-                            </button>
+                            <div class="antigravity-auth-group">
+                                <a href="login.html" class="btn btn-antigravity-login">Login Access</a>
+                                <a href="register.html" class="btn btn-primary">Join Universe</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Desktop Auth -->
-                <div class="auth-buttons-desktop d-none d-lg-flex align-items-center gap-2 ms-3">
-                    <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
-                    <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
-                </div>
+
+
             </div>
         </nav>
     </header>
 
-    <main>
+    <main class="pricing-page">
         <!-- Page Header -->
-        <section class="py-5 mt-5 bg-dark text-center">
+        <section class="py-5 mt-5 bg-dark text-center pricing-hero-section">
             <div class="container py-5">
-                <h1 class="display-4 fw-bold mb-3">Simple Pricing, No Hidden Fees</h1>
-                <p class="lead text-muted">Pay per hour or get a membership for unlimited fun.</p>
+                <h1 class="display-4 fw-bold text-white mb-3">Simple Pricing, No Hidden Fees</h1>
+                <p class="lead pricing-hero-subtitle mb-0">Pay per hour or get a membership for unlimited fun.</p>
 
                 <!-- Pricing Toggle -->
                 <div class="d-flex justify-content-center align-items-center mt-4">
@@ -90,19 +136,19 @@
         </section>
 
         <!-- Pricing Cards -->
-        <section class="py-5">
+        <section class="py-5 pricing-plans-section">
             <div class="container">
-                <div class="row g-4 align-items-center">
+                <div class="row g-4 pricing-plans-row">
 
                     <!-- Basic Plan -->
-                    <div class="col-lg-4">
-                        <div class="card bg-transparent border-secondary border-opacity-25 h-100 p-4">
-                            <div class="card-body text-center">
+                    <div class="col-lg-4 pricing-plan-col">
+                        <div class="card bg-transparent border-secondary border-opacity-25 h-100 p-4 pricing-plan-card">
+                            <div class="card-body text-center pricing-plan-body">
                                 <h3 class="h5 text-muted mb-3">STARTER</h3>
                                 <div class="display-4 fw-bold mb-3">$20<span class="fs-6 text-muted">/hour</span></div>
                                 <p class="text-muted mb-4 small">Perfect for first-timers and casual gamers.</p>
 
-                                <ul class="list-unstyled text-start mb-4 mx-auto" style="max-width: 250px;">
+                                <ul class="list-unstyled text-start mb-4 mx-auto pricing-features" style="max-width: 250px;">
                                     <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i> Access to Solo
                                         Stations</li>
                                     <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i> Standard VR
@@ -112,25 +158,24 @@
                                     <li class="mb-2"><i class="bi bi-x-lg text-danger me-2"></i> No Free Roam</li>
                                 </ul>
 
-                                <a href="service-details.html" class="btn btn-outline-light w-100">Choose Starter</a>
+                                <a href="service-details.html" class="btn btn-outline-light w-100 pricing-plan-cta">Choose Starter</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Pro Plan (Highlight) -->
-                    <div class="col-lg-4">
-                        <div class="card bg-dark border-primary position-relative h-100 p-5 shadow-lg"
-                            style="transform: scale(1.05); z-index: 2;">
+                    <div class="col-lg-4 pricing-plan-col">
+                        <div class="card bg-dark border-primary position-relative h-100 p-5 shadow-lg pricing-plan-card pricing-plan-card-featured">
                             <div class="position-absolute top-0 start-50 translate-middle">
                                 <span class="badge bg-primary px-3 py-2 rounded-pill shadow">MOST POPULAR</span>
                             </div>
-                            <div class="card-body text-center">
+                            <div class="card-body text-center pricing-plan-body">
                                 <h3 class="h5 text-primary mb-3">GAMER</h3>
-                                <div class="display-4 fw-bold mb-3">$35<span class="fs-6 text-muted">/hour</span></div>
+                                <div class="display-4 fw-bold text-white mb-3">$35<span class="fs-6 text-muted">/hour</span></div>
                                 <p class="text-white-50 mb-4 small">Full access to all standard and multiplayer games.
                                 </p>
 
-                                <ul class="list-unstyled text-start mb-4 mx-auto" style="max-width: 250px;">
+                                <ul class="list-unstyled text-start mb-4 mx-auto pricing-features" style="max-width: 250px;">
                                     <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i> Access to All
                                         Stations</li>
                                     <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i> Multiplayer
@@ -140,21 +185,21 @@
                                     <li class="mb-2"><i class="bi bi-x-lg text-secondary me-2"></i> No Private Room</li>
                                 </ul>
 
-                                <a href="service-details.html" class="btn btn-primary w-100 py-3 fw-bold">Choose
+                                <a href="service-details.html" class="btn btn-primary w-100 py-3 fw-bold pricing-plan-cta">Choose
                                     Gamer</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Elite Plan -->
-                    <div class="col-lg-4">
-                        <div class="card bg-transparent border-secondary border-opacity-25 h-100 p-4">
-                            <div class="card-body text-center">
+                    <div class="col-lg-4 pricing-plan-col">
+                        <div class="card bg-transparent border-secondary border-opacity-25 h-100 p-4 pricing-plan-card">
+                            <div class="card-body text-center pricing-plan-body">
                                 <h3 class="h5 text-muted mb-3">VIP</h3>
                                 <div class="display-4 fw-bold mb-3">$50<span class="fs-6 text-muted">/hour</span></div>
                                 <p class="text-muted mb-4 small">The ultimate experience with private service.</p>
 
-                                <ul class="list-unstyled text-start mb-4 mx-auto" style="max-width: 250px;">
+                                <ul class="list-unstyled text-start mb-4 mx-auto pricing-features" style="max-width: 250px;">
                                     <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i> All Access Pass
                                     </li>
                                     <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i> Private VIP Room
@@ -165,7 +210,7 @@
                                     </li>
                                 </ul>
 
-                                <a href="service-details.html" class="btn btn-outline-light w-100">Choose VIP</a>
+                                <a href="service-details.html" class="btn btn-outline-light w-100 pricing-plan-cta">Choose VIP</a>
                             </div>
                         </div>
                     </div>
@@ -175,15 +220,15 @@
         </section>
 
         <!-- NEW SECTION 1: COMPARE PLANS TABLE -->
-        <section class="py-5 bg-dark">
+        <section class="py-5 bg-dark pricing-compare-section">
             <div class="container py-4">
                 <div class="text-center mb-5 reveal">
-                    <h2 class="fw-bold">Compare Features</h2>
-                    <p class="text-muted">Detailed breakdown of what's included.</p>
+                    <h2 class="fw-bold text-white">Compare Features</h2>
+                    <p class="pricing-compare-subtitle">Detailed breakdown of what's included.</p>
                 </div>
-                <div class="table-responsive reveal">
+                <div class="table-responsive reveal pricing-compare-table-wrap">
                     <table
-                        class="table table-dark table-striped table-hover border border-secondary border-opacity-25 text-center align-middle">
+                        class="table table-dark table-striped table-hover border border-secondary border-opacity-25 text-center align-middle pricing-compare-table">
                         <thead>
                             <tr>
                                 <th scope="col" class="text-start p-4">Features</th>
@@ -239,7 +284,7 @@
         <section class="py-5">
             <div class="container py-4">
                 <div
-                    class="row align-items-center bg-primary bg-opacity-10 rounded-5 p-5 border border-primary border-opacity-25 reveal">
+                    class="row align-items-center bg-primary bg-opacity-10 rounded-5 p-5 border border-primary border-opacity-25 reveal pricing-offer-card">
                     <div class="col-lg-8 mb-4 mb-lg-0">
                         <span class="badge bg-primary mb-2">LIMITED TIME</span>
                         <h3 class="display-6 fw-bold text-white mb-3">Student & Group Discounts</h3>
@@ -262,13 +307,13 @@
         </section>
     </main>
 
-  <footer>
+    <footer>
         <div class="container">
             <div class="row g-4">
                 <!-- Column 1: Brand -->
                 <div class="col-lg-4 col-md-6 text-center text-md-start">
                     <a href="index.html" class="footer-brand">
-                        <i class="bi bi-headset-vr"></i> VR ARCADE
+                        <i class="bi bi-headset-vr text-gradient"></i> VR <span>ARCADE</span>
                     </a>
                     <p class="small text-muted mb-4">
                         Bringing the future of entertainment to your doorstep. Experience VR like never before.

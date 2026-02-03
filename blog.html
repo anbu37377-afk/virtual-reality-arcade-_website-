@@ -12,56 +12,114 @@
 
 <body>
 
-    <!-- HEADER -->
+    <!-- ==================== HEADER ==================== -->
     <header>
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
+                <!-- 1. Logo + Brand Name -->
                 <a class="navbar-brand" href="index.html">
-                    <i class="bi bi-headset-vr"></i> VR <span>ARCADE</span>
+                    <i class="bi bi-headset-vr text-gradient"></i>
+                    VR <span>ARCADE</span>
                 </a>
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar">
-                    <i class="bi bi-list fs-1 text-white"></i>
+
+                <!-- 2. Desktop Navigation (Centered) -->
+                <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
+                    <ul class="desktop-nav">
+                        <li><a class="nav-link" href="index.html">Home</a></li>
+                        <li><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li><a class="nav-link" href="about.html">About</a></li>
+                        <li><a class="nav-link" href="services.html">Services</a></li>
+                        <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li><a class="nav-link active" href="blog.html">Blog</a></li>
+                        <li><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <!-- 3. Desktop Actions (Right) -->
+                <div class="d-none d-lg-flex desktop-actions">
+                    <button class="theme-switch-desktop" title="Toggle Theme">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-login">Login</a>
+                    <a href="register.html" class="btn btn-primary">Sign Up</a>
+                </div>
+
+                <!-- 4. Anti-Gravity Floating Trigger (Mobile Only) -->
+                <button class="navbar-toggler antigravity-menu-trigger border-0 d-lg-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="bi bi-list"></i>
                 </button>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
-                    <div class="offcanvas-header border-bottom border-secondary">
-                        <h5 class="offcanvas-title">VR ARCADE MENU</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+
+                <!-- 5. Anti-Gravity Floating Panel (Shared for Mobile/Tablet) -->
+                <div class="offcanvas offcanvas-end antigravity-panel" tabindex="-1" id="offcanvasNavbar"
+                    data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header justify-content-between align-items-center">
+                        <h5 class="offcanvas-title font-monospace text-gradient" id="offcanvasNavbarLabel">COMMAND
+                            CENTER</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
                     </div>
+
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
-
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                                                        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
-
+                        <!-- Futuristic Navigation -->
+                        <ul class="antigravity-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="home-2.html">Home 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-primary" href="dashboard.html">
+                                    <i class="bi bi-cpu-fill me-2"></i>Dashboard
+                                </a>
+                            </li>
                         </ul>
-                        <div class="d-lg-none mobile-auth-buttons">
-                            <a href="login.html" class="btn btn-secondary w-100 mb-2">Login</a>
-                            <a href="register.html" class="btn btn-primary w-100">Sign Up</a>
-                        </div>
-                        <div class="d-flex align-items-center mt-3 mt-lg-0">
-                            <button id="theme-toggle" class="me-3"><i class="bi bi-sun-fill"></i></button>
+
+                        <!-- Anti-Gravity Footer (Theme + Auth) -->
+                        <div class="antigravity-footer">
+                            <div class="theme-switchers-group">
+                                <button class="theme-switch-btn" id="theme-light-btn">
+                                    <i class="bi bi-sun-fill"></i> Light
+                                </button>
+                                <button class="theme-switch-btn" id="theme-dark-btn">
+                                    <i class="bi bi-moon-stars-fill"></i> Dark
+                                </button>
+                            </div>
+
+                            <div class="antigravity-auth-group">
+                                <a href="login.html" class="btn btn-antigravity-login">Login Access</a>
+                                <a href="register.html" class="btn btn-primary">Join Universe</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="auth-buttons-desktop d-none d-lg-flex">
-                    <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
-                    <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
-                </div>
+
+
             </div>
         </nav>
     </header>
 
     <main>
         <!-- Page Header -->
-        <section class="py-5 mt-5 bg-dark border-bottom border-secondary border-opacity-25">
-            <div class="container py-5 text-center">
+        <section class="py-5 mt-5 border-bottom border-secondary border-opacity-25 blog-hero-section">
+            <div class="container py-5 text-center blog-hero-content">
                 <h1 class="display-4 fw-bold">Latest VR News</h1>
                 <p class="lead text-muted">Updates from the metaverse and our arcade.</p>
             </div>
@@ -89,9 +147,11 @@
 
                         <!-- Post 1 -->
                         <div class="card bg-transparent border-0 mb-5">
-                            <img src="https://images.unsplash.com/photo-1592478411213-61535fddbadf?q=80&w=2070&auto=format&fit=crop"
-                                class="card-img-top rounded-4 mb-3" alt="Blog Image"
-                                style="height: 400px; object-fit: cover;">
+                            <a href="blog-details.html">
+                                <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=2078&auto=format&fit=crop"
+                                    class="card-img-top rounded-4 mb-3" alt="Blog Image"
+                                    style="height: 400px; object-fit: cover;">
+                            </a>
                             <div class="card-body px-0">
                                 <div class="d-flex gap-3 mb-2 text-primary small fw-bold">
                                     <span>GAMES</span>
@@ -112,9 +172,11 @@
 
                         <!-- Post 2 -->
                         <div class="card bg-transparent border-0 mb-5">
-                            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
-                                class="card-img-top rounded-4 mb-3" alt="Blog Image"
-                                style="height: 400px; object-fit: cover;">
+                            <a href="blog-details.html">
+                                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
+                                    class="card-img-top rounded-4 mb-3" alt="Blog Image"
+                                    style="height: 400px; object-fit: cover;">
+                            </a>
                             <div class="card-body px-0">
                                 <div class="d-flex gap-3 mb-2 text-primary small fw-bold">
                                     <span>TECH</span>
@@ -206,13 +268,15 @@
         </section>
 
         <!-- NEW SECTION 1: EDITOR'S PICK -->
-        <section class="py-5 bg-dark border-top border-bottom border-secondary border-opacity-25">
+        <section class="py-5 bg-dark border-top border-bottom border-secondary border-opacity-25 editors-pick-section">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row align-items-center g-4">
                     <div class="col-lg-6 mb-4 mb-lg-0">
-                        <div class="position-relative hover-scale reveal">
-                            <img src="https://images.unsplash.com/photo-1626387346567-38774613278d?q=80&w=2071&auto=format&fit=crop"
-                                class="img-fluid rounded-4 shadow-lg" alt="Editors Pick">
+                        <div class="position-relative hover-scale reveal editors-pick-media">
+                            <a href="blog-details.html">
+                                <img src="https://img.freepik.com/premium-photo/computer-keyboard-mouse-joystick-black-background_93675-157805.jpg"
+                                    class="img-fluid rounded-4 shadow-lg editors-pick-img" alt="Editors Pick">
+                            </a>
                             <div
                                 class="position-absolute top-0 start-0 m-3 px-3 py-1 bg-primary text-white rounded-pill fw-bold small">
                                 EDITOR'S PICK</div>
@@ -291,13 +355,13 @@
         </section>
     </main>
 
-   <footer>
+    <footer>
         <div class="container">
             <div class="row g-4">
                 <!-- Column 1: Brand -->
                 <div class="col-lg-4 col-md-6 text-center text-md-start">
                     <a href="index.html" class="footer-brand">
-                        <i class="bi bi-headset-vr"></i> VR ARCADE
+                        <i class="bi bi-headset-vr text-gradient"></i> VR <span>ARCADE</span>
                     </a>
                     <p class="small text-muted mb-4">
                         Bringing the future of entertainment to your doorstep. Experience VR like never before.

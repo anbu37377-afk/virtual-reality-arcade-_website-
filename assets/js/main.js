@@ -21,18 +21,29 @@ document.addEventListener('DOMContentLoaded', function () {
         htmlElement.setAttribute('data-bs-theme', savedTheme);
     }
 
+    // Navbar Scroll Effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
     // Function to update interaction icons
     function updateIcons(theme) {
-        // Find all theme toggle icons (desktop and mobile)
-        const icons = document.querySelectorAll('#theme-toggle i, #theme-toggle-mobile i');
+        // Find all theme toggle icons (desktop, mobile, and dropdown)
+        const icons = document.querySelectorAll('#theme-toggle i, #theme-toggle-mobile i, .theme-switch-desktop i');
 
         icons.forEach(img => {
             if (theme === 'dark') {
                 img.classList.remove('bi-moon-fill');
+                img.classList.remove('bi-moon-stars');
                 img.classList.add('bi-sun-fill');
             } else {
                 img.classList.remove('bi-sun-fill');
-                img.classList.add('bi-moon-fill');
+                img.classList.add('bi-moon-stars');
             }
         });
     }
@@ -59,6 +70,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (themeToggleBtnMobile) {
         themeToggleBtnMobile.addEventListener('click', toggleTheme);
+    }
+
+    // Antigravity Theme Switchers
+    const lightBtn = document.getElementById('theme-light-btn');
+    const darkBtn = document.getElementById('theme-dark-btn');
+
+    if (lightBtn) {
+        lightBtn.addEventListener('click', () => {
+            htmlElement.setAttribute('data-bs-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            updateIcons('light');
+        });
+    }
+
+    if (darkBtn) {
+        darkBtn.addEventListener('click', () => {
+            htmlElement.setAttribute('data-bs-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            updateIcons('dark');
+        });
+    }
+
+    // Desktop Theme Toggle
+    const desktopThemeBtn = document.querySelector('.theme-switch-desktop');
+    if (desktopThemeBtn) {
+        desktopThemeBtn.addEventListener('click', toggleTheme);
     }
 
     // 2. Back to Top Button
