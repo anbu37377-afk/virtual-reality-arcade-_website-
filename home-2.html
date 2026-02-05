@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mixed Reality Lab | VR Arcade</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         .hero-home-2 {
-            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent), url('https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=2078&auto=format&fit=crop');
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), transparent), url('https://images.unsplash.com/photo-1626387667886-dfbe2226f399?q=80&w=2070&auto=format&fit=crop');
             background-size: cover;
-            background-position: center;
+            background-position: center top;
+            background-repeat: no-repeat;
             min-height: 100vh;
         }
     </style>
@@ -152,16 +154,14 @@
             <div class="container py-5">
                 <div class="row g-4">
                     <div class="col-md-4">
-                        <div
-                            class="p-5 border border-secondary border-opacity-25 rounded-4 h-100 hover-scale transition-all reveal">
+                        <div class="p-5 rounded-4 h-100 contrast-box transition-all reveal">
                             <i class="bi bi-brush fs-1 text-primary mb-3"></i>
                             <h3>VR Art & Design</h3>
                             <p class="text-muted">Create 3D masterpieces in Google Tilt Brush or Gravity Sketch.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div
-                            class="p-5 border border-secondary border-opacity-25 rounded-4 h-100 hover-scale transition-all reveal reveal-delay-200">
+                        <div class="p-5 rounded-4 h-100 contrast-box transition-all reveal reveal-delay-200">
                             <i class="bi bi-globe-americas fs-1 text-secondary mb-3"></i>
                             <h3>Virtual Travel</h3>
                             <p class="text-muted">Visit the pyramids of Egypt or walk on Mars with photorealistic scans.
@@ -169,8 +169,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div
-                            class="p-5 border border-secondary border-opacity-25 rounded-4 h-100 hover-scale transition-all reveal reveal-delay-300">
+                        <div class="p-5 rounded-4 h-100 contrast-box transition-all reveal reveal-delay-300">
                             <i class="bi bi-book fs-1 text-success mb-3"></i>
                             <h3>Education</h3>
                             <p class="text-muted">Immersive history lessons and human anatomy exploration for students.
@@ -232,12 +231,9 @@
 
         <!-- NEW SECTION 2: INDUSTRY SOLUTIONS (Grid + Iconography) -->
         <section class="py-5 bg-dark position-relative overflow-hidden">
-            <!-- Abstract Bg decoration -->
-            <div class="position-absolute top-0 end-0 p-5 mt-5">
-                <i class="bi bi-bounding-box-circles text-primary opacity-10" style="font-size: 20rem;"></i>
-            </div>
 
-            <div class="container py-5 position-relative z-2">
+
+            <div class="container py-5 position-relative" style="z-index: 2;">
                 <div class="text-center mb-5 reveal">
                     <span class="text-gradient fw-bold text-uppercase letter-spacing-2">Innovation Hub</span>
                     <h2 class="display-5 fw-bold mt-2">Enterprise Solutions</h2>
@@ -349,8 +345,8 @@
                     <div class="col-lg-4 col-md-6">
                         <div
                             class="card bg-black border border-secondary border-opacity-25 h-100 reveal reveal-delay-300 hover-scale">
-                            <img src="https://cdn.mos.cms.futurecdn.net/dE5hf5UKohcCC7FVgjqr9e.jpg"
-                                class="card-img-top" alt="Project 3" style="height: 200px; object-fit: cover;">
+                            <img src="https://cdn.mos.cms.futurecdn.net/dE5hf5UKohcCC7FVgjqr9e.jpg" class="card-img-top"
+                                alt="Project 3" style="height: 200px; object-fit: cover;">
                             <div class="card-body">
                                 <span class="badge bg-info mb-2">Art</span>
                                 <h4 class="h5 fw-bold text-white">Void Sculptures</h4>

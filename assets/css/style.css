@@ -35,6 +35,10 @@
 }
 
 /* Universal fix for forced dark sections (bg-dark, bg-black) across all themes */
+/* Universal fix for forced dark sections (bg-dark, bg-black) across all themes */
+[data-bs-theme="light"] .bg-dark,
+[data-bs-theme="light"] .bg-black,
+[data-bs-theme="light"] footer,
 .bg-dark,
 .bg-black,
 footer {
@@ -42,6 +46,24 @@ footer {
     color: #ffffff !important;
 }
 
+[data-bs-theme="light"] .bg-dark h1,
+[data-bs-theme="light"] .bg-dark h2,
+[data-bs-theme="light"] .bg-dark h3,
+[data-bs-theme="light"] .bg-dark h4,
+[data-bs-theme="light"] .bg-dark h5,
+[data-bs-theme="light"] .bg-dark h6,
+[data-bs-theme="light"] .bg-black h1,
+[data-bs-theme="light"] .bg-black h2,
+[data-bs-theme="light"] .bg-black h3,
+[data-bs-theme="light"] .bg-black h4,
+[data-bs-theme="light"] .bg-black h5,
+[data-bs-theme="light"] .bg-black h6,
+[data-bs-theme="light"] footer h1,
+[data-bs-theme="light"] footer h2,
+[data-bs-theme="light"] footer h3,
+[data-bs-theme="light"] footer h4,
+[data-bs-theme="light"] footer h5,
+[data-bs-theme="light"] footer h6,
 .bg-dark h1,
 .bg-dark h2,
 .bg-dark h3,
@@ -63,22 +85,56 @@ footer h6 {
     color: #ffffff !important;
 }
 
+[data-bs-theme="light"] .bg-dark .text-muted,
+[data-bs-theme="light"] .bg-black .text-muted,
+[data-bs-theme="light"] footer .text-muted,
 .bg-dark .text-muted,
 .bg-black .text-muted,
 footer .text-muted {
     color: rgba(255, 255, 255, 0.6) !important;
 }
 
+[data-bs-theme="light"] .bg-dark p,
+[data-bs-theme="light"] .bg-black p,
+[data-bs-theme="light"] footer p,
 .bg-dark p,
 .bg-black p,
 footer p {
     color: rgba(255, 255, 255, 0.8) !important;
 }
 
+[data-bs-theme="light"] .bg-dark .text-white-50,
+[data-bs-theme="light"] .bg-black .text-white-50,
+[data-bs-theme="light"] footer .text-white-50,
 .bg-dark .text-white-50,
 .bg-black .text-white-50,
 footer .text-white-50 {
     color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Fix for links and brand elements in forced dark sections across all themes */
+[data-bs-theme="light"] .bg-dark a:not(.btn),
+[data-bs-theme="light"] .bg-black a:not(.btn),
+[data-bs-theme="light"] footer a:not(.btn),
+.bg-dark a:not(.btn),
+.bg-black a:not(.btn),
+footer a:not(.btn) {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+[data-bs-theme="light"] .bg-dark a:not(.btn):hover,
+[data-bs-theme="light"] .bg-black a:not(.btn):hover,
+[data-bs-theme="light"] footer a:not(.btn):hover,
+.bg-dark a:not(.btn):hover,
+.bg-black a:not(.btn):hover,
+footer a:not(.btn):hover {
+    color: var(--primary-color) !important;
+    opacity: 1 !important;
+}
+
+[data-bs-theme="light"] .footer-brand,
+.footer-brand {
+    color: #ffffff !important;
 }
 
 /* Fix for Details button visibility in Light Mode */
@@ -94,18 +150,26 @@ footer .text-white-50 {
 }
 
 /* Ensure btn-outline-light remains white in dark backgrounds regardless of global theme */
+[data-bs-theme="light"] .bg-dark .btn-outline-light,
+[data-bs-theme="light"] .bg-black .btn-outline-light,
+[data-bs-theme="light"] footer .btn-outline-light,
 .bg-dark .btn-outline-light,
 .bg-black .btn-outline-light,
 footer .btn-outline-light {
     color: #ffffff !important;
     border-color: #ffffff !important;
+    background: transparent !important;
 }
 
+[data-bs-theme="light"] .bg-dark .btn-outline-light:hover,
+[data-bs-theme="light"] .bg-black .btn-outline-light:hover,
+[data-bs-theme="light"] footer .btn-outline-light:hover,
 .bg-dark .btn-outline-light:hover,
 .bg-black .btn-outline-light:hover,
 footer .btn-outline-light:hover {
     background-color: #ffffff !important;
     color: #000 !important;
+    transform: translateY(-3px);
 }
 
 body {
@@ -140,34 +204,86 @@ a {
 /* =========================================
    2. BUTTONS & UTILITIES
    ========================================= */
-.btn-primary {
-    background: linear-gradient(45deg, var(--primary-color), var(--primary-hover));
-    border: none;
-    color: #fff;
+.btn {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        color 0.3s ease !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer !important;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    z-index: 10;
+}
+
+.btn-primary,
+.btn.btn-primary {
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-hover)) !important;
+    border: none !important;
+    color: #fff !important;
     padding: 10px 24px;
     border-radius: 8px;
     font-weight: 600;
 }
 
-.btn-primary:hover {
-    background: linear-gradient(45deg, var(--primary-hover), var(--primary-color));
-    box-shadow: 0 0 15px rgba(140, 82, 255, 0.5);
-    transform: translateY(-2px);
+.btn-primary:hover,
+.btn.btn-primary:hover {
+    background: linear-gradient(45deg, var(--primary-hover), var(--primary-color)) !important;
+    box-shadow: 0 8px 20px rgba(140, 82, 255, 0.4);
+    transform: translateY(-3px);
+    z-index: 10;
 }
 
-.btn-secondary {
-    background: transparent;
-    border: 2px solid var(--secondary-color);
-    color: var(--secondary-color);
+.btn-secondary,
+.btn.btn-secondary {
+    background: transparent !important;
+    border: 2px solid var(--secondary-color) !important;
+    color: var(--secondary-color) !important;
     padding: 10px 24px;
     border-radius: 8px;
     font-weight: 600;
 }
 
-.btn-secondary:hover {
-    background: var(--secondary-color);
-    color: #000;
-    box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+.btn-secondary:hover,
+.btn.btn-secondary:hover {
+    background: var(--secondary-color) !important;
+    color: #000 !important;
+    box-shadow: 0 8px 20px rgba(0, 229, 255, 0.4);
+    transform: translateY(-3px);
+    z-index: 10;
+}
+
+.btn-outline-primary,
+.btn.btn-outline-primary {
+    border: 2px solid var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    background: transparent !important;
+}
+
+.btn-outline-primary:hover,
+.btn.btn-outline-primary:hover {
+    background: var(--primary-color) !important;
+    color: #fff !important;
+    box-shadow: 0 8px 20px rgba(140, 82, 255, 0.4);
+    transform: translateY(-3px);
+    z-index: 10;
+}
+
+@keyframes btn-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 .text-gradient {
@@ -190,7 +306,22 @@ a {
     box-shadow: 0 15px 40px rgba(140, 82, 255, 0.15);
 }
 
-.service-grid > [class*="col-"] {
+.contrast-box {
+    background: rgba(255, 255, 255, 0.04) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.contrast-box:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 20px 45px rgba(140, 82, 255, 0.2);
+    transform: translateY(-10px);
+}
+
+.service-grid>[class*="col-"] {
     display: flex;
 }
 
@@ -234,7 +365,7 @@ a {
     white-space: nowrap;
 }
 
-.service-stats-row > [class*="col-"] {
+.service-stats-row>[class*="col-"] {
     display: flex;
 }
 
@@ -284,7 +415,7 @@ a {
     color: rgba(243, 246, 255, 0.72) !important;
 }
 
-.pricing-page .pricing-plans-row > [class*="col-"] {
+.pricing-page .pricing-plans-row>[class*="col-"] {
     display: flex;
 }
 
@@ -293,9 +424,15 @@ a {
 }
 
 .pricing-page .pricing-plan-card {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    height: 100%;
+    padding: 2.5rem !important;
+    /* Normalized padding for all cards */
     border-color: rgba(255, 255, 255, 0.18) !important;
     background-color: rgba(255, 255, 255, 0.03) !important;
+    transition: all 0.3s ease;
 }
 
 [data-bs-theme="light"] .pricing-page .pricing-plan-card {
@@ -304,14 +441,17 @@ a {
 }
 
 .pricing-page .pricing-plan-card-featured {
-    border-color: rgba(140, 82, 255, 0.85) !important;
+    border-color: var(--primary-color) !important;
     background-color: #151725 !important;
     color: #f4f6ff;
+    transform: scale(1.05);
+    /* Make it stand out slightly */
+    z-index: 2;
 }
 
 [data-bs-theme="light"] .pricing-page .pricing-plan-card-featured {
     background-color: #151725 !important;
-    border-color: rgba(140, 82, 255, 0.85) !important;
+    border-color: var(--primary-color) !important;
     color: #f4f6ff !important;
 }
 
@@ -320,31 +460,33 @@ a {
     color: rgba(243, 246, 255, 0.68) !important;
 }
 
-[data-bs-theme="light"] .pricing-page .pricing-plan-card-featured .text-muted,
-[data-bs-theme="light"] .pricing-page .pricing-plan-card-featured .text-white-50 {
-    color: rgba(243, 246, 255, 0.68) !important;
-}
-
-[data-bs-theme="dark"] .pricing-page .pricing-plan-card:not(.pricing-plan-card-featured) .text-muted {
-    color: rgba(226, 232, 255, 0.66) !important;
+.pricing-page .pricing-plan-card-featured .text-primary {
+    color: var(--secondary-color) !important;
+    /* Better contrast on dark feature card */
 }
 
 .pricing-page .pricing-plan-body {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    flex-grow: 1;
+    /* Ensure body takes up all space */
+    padding: 0 !important;
 }
 
 .pricing-page .pricing-features {
     flex-grow: 1;
+    margin-bottom: 2rem !important;
 }
 
 .pricing-page .pricing-plan-cta {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 44px;
+    width: 100%;
     margin-top: auto;
+    /* Push to bottom */
+    min-height: 50px;
+    font-weight: 700 !important;
 }
 
 .pricing-page .pricing-compare-section {
@@ -762,6 +904,7 @@ a {
     background: rgba(140, 82, 255, 0.1);
     border-color: var(--primary-color);
     color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 .desktop-actions .btn {
@@ -785,73 +928,8 @@ a {
 .desktop-actions .btn-login:hover {
     background: var(--secondary-color);
     color: #000 !important;
-}
-
-.nav-link:hover,
-.nav-link.active {
-    color: var(--primary-color);
-}
-
-/* Theme Toggle */
-#theme-toggle {
-    background: none;
-    border: none;
-    color: var(--text-color);
-    font-size: 1.2rem;
-    cursor: pointer;
-    margin-right: 15px;
-}
-
-/* IMPORTANT: Hide Auth buttons in header on mobile if inside offcanvas. 
-   User requirement: "Header shows ONLY: Logo + Menu". 
-   Auth buttons should happen INSIDE the offcanvas for mobile. */
-
-/* Tablet & Desktop Adjustments (>= 992px) */
-@media (min-width: 992px) {
-    .offcanvas {
-        background: transparent;
-        width: auto;
-        border: none;
-        position: static;
-        height: auto;
-        visibility: visible;
-        transform: none;
-        display: flex;
-        flex-grow: 1;
-        justify-content: flex-end;
-        align-items: center;
-        box-shadow: none;
-    }
-
-    .offcanvas-header {
-        display: none;
-    }
-
-    .offcanvas-body {
-        display: flex;
-        align-items: center;
-        width: auto;
-        padding: 0;
-        overflow: visible;
-    }
-
-    .navbar-nav {
-        flex-direction: row;
-        gap: 20px;
-        align-items: center;
-    }
-
-    .nav-link {
-        padding: 0;
-        font-size: 1rem;
-    }
-
-    /* Show Auth Buttons inline on Desktop */
-    .auth-buttons-desktop {
-        display: flex;
-        gap: 10px;
-        margin-left: 20px;
-    }
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 229, 255, 0.3);
 }
 
 /* Mobile Adjustments (< 992px) */
@@ -1283,8 +1361,14 @@ footer {
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     z-index: 99;
+}
+
+#back-to-top:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(140, 82, 255, 0.4);
 }
 
 
@@ -1352,7 +1436,8 @@ main {
 .reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+    transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1),
+        transform 0.8s cubic-bezier(0.5, 0, 0, 1);
     will-change: opacity, transform;
 }
 
@@ -1375,8 +1460,9 @@ main {
 }
 
 /* Micro-interactions */
+/* Removed pulse-glow on hover */
 .btn-primary:hover {
-    animation: pulse-glow 1.5s infinite;
+    box-shadow: 0 8px 25px rgba(140, 82, 255, 0.5);
 }
 
 /* =========================================
@@ -1597,7 +1683,12 @@ body.offcanvas-open {
     gap: 10px;
     font-weight: 600;
     font-size: 0.9rem;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+}
+
+.theme-switch-btn:hover {
+    color: #fff;
+    transform: translateY(-2px);
 }
 
 [data-bs-theme="dark"] .theme-switch-btn#theme-dark-btn {
@@ -1636,6 +1727,7 @@ body.offcanvas-open {
 .btn-antigravity-login:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: #fff;
+    transform: translateY(-3px);
 }
 
 /* Hide original navbar elements on mobile if needed */
