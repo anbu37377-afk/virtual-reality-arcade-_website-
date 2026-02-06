@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | VR Arcade</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <!-- 1. Logo + Brand Name -->
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi bi-headset-vr text-gradient"></i>
+                    VR <span>ARCADE</span>
+                </a>
+
+                <!-- 2. Desktop Navigation (Centered) -->
+                <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
+                    <ul class="desktop-nav">
+                        <li><a class="nav-link" href="index.html">Home</a></li>
+                        <li><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li><a class="nav-link active" href="about.html">About</a></li>
+                        <li><a class="nav-link" href="services.html">Services</a></li>
+                        <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <!-- 3. Desktop Actions (Right) -->
+                <div class="d-none d-lg-flex desktop-actions">
+                    <button class="theme-switch-desktop" title="Toggle Theme">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-login">Login</a>
+                    <a href="register.html" class="btn btn-primary">Sign Up</a>
+                </div>
+
+                <!-- 4. Anti-Gravity Floating Trigger (Mobile Only) -->
+                <button class="navbar-toggler antigravity-menu-trigger border-0 d-lg-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <!-- 5. Anti-Gravity Floating Panel (Shared for Mobile/Tablet) -->
+                <div class="offcanvas offcanvas-end antigravity-panel" tabindex="-1" id="offcanvasNavbar"
+                    data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header justify-content-between align-items-center">
+                        <h5 class="offcanvas-title font-monospace text-gradient" id="offcanvasNavbarLabel">COMMAND
+                            CENTER</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <!-- Futuristic Navigation -->
+                        <ul class="antigravity-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="home-2.html">Home 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-primary" href="dashboard.html">
+                                    <i class="bi bi-cpu-fill me-2"></i>Dashboard
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Anti-Gravity Footer (Theme + Auth) -->
+                        <div class="antigravity-footer">
+                            <div class="theme-switchers-group">
+                                <button class="theme-switch-btn" id="theme-light-btn">
+                                    <i class="bi bi-sun-fill"></i> Light
+                                </button>
+                                <button class="theme-switch-btn" id="theme-dark-btn">
+                                    <i class="bi bi-moon-stars-fill"></i> Dark
+                                </button>
+                            </div>
+
+                            <div class="antigravity-auth-group">
+                                <a href="login.html" class="btn btn-antigravity-login">Login Access</a>
+                                <a href="register.html" class="btn btn-primary">Join Universe</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About Hero -->
+        <section class="py-5 mt-5">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=2078&auto=format&fit=crop"
+                            class="img-fluid rounded-4 shadow-lg" alt="About VR Arcade">
+                        <div class="row g-2 mt-2">
+                            <div class="col-6">
+                                <img src="https://images.unsplash.com/photo-1516110833967-0b5716ca1387?q=80&w=1000&auto=format&fit=crop"
+                                    class="img-fluid rounded-4 h-100 object-fit-cover" alt="VR Equipment">
+                            </div>
+                            <div class="col-6">
+                                <img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?q=80&w=1000&auto=format&fit=crop"
+                                    class="img-fluid rounded-4 h-100 object-fit-cover" alt="VR Player">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 ps-lg-5">
+                        <h6 class="text-primary fw-bold text-uppercase">Who We Are</h6>
+                        <h1 class="display-4 fw-bold mb-4">Building the Future of Entertainment</h1>
+                        <p class="lead text-muted mb-4">
+                            Founded in 2024, VR Arcade started with a simple mission: to make high-end virtual reality
+                            accessible to everyone. We believe VR is not just a game, but a new way to experience
+                            stories, connect with friends, and explore the impossible.
+                        </p>
+                        <p class="text-muted mb-4">
+                            What began as a small pop-up with two headsets has grown into the city's premier VR
+                            destination, featuring state-of-the-art free roam arenas, 4D simulators, and a library of
+                            over 100 experiences.
+                        </p>
+                        <div class="row g-4 mb-4">
+                            <div class="col-6">
+                                <h3 class="fw-bold text-white">50+</h3>
+                                <p class="small text-muted">VR Stations</p>
+                            </div>
+                            <div class="col-6">
+                                <h3 class="fw-bold text-white">10k+</h3>
+                                <p class="small text-muted">Happy Gamers</p>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <a href="contact.html" class="btn btn-outline-light">Get in Touch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech & Safety -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row text-center mb-5">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="fw-bold">Safety & Technology</h2>
+                        <p class="text-muted">We use the latest gear and follow strict hygiene protocols.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4 text-center">
+                        <div class="p-4 border border-secondary border-opacity-25 rounded-4 h-100">
+                            <i class="bi bi-cpu fs-1 text-primary mb-3"></i>
+                            <h4 class="h5">Next-Gen Hardware</h4>
+                            <p class="small text-muted">Powered by RTX 4090s and high-resolution headsets for lag-free,
+                                crystal clear visuals.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="p-4 border border-secondary border-opacity-25 rounded-4 h-100">
+                            <i class="bi bi-shield-check fs-1 text-success mb-3"></i>
+                            <h4 class="h5">Hygiene First</h4>
+                            <p class="small text-muted">All equipment is UV-C sanitized after every single use.
+                                Disposable masks are available.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="p-4 border border-secondary border-opacity-25 rounded-4 h-100">
+                            <i class="bi bi-person-check fs-1 text-info mb-3"></i>
+                            <h4 class="h5">Expert Staff</h4>
+                            <p class="small text-muted">Our trained Game Masters are always nearby to help you with
+                                equipment or gameplay.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 1: OUR JOURNEY (Timeline) -->
+        <section class="py-5">
+            <div class="container py-lg-5">
+                <div class="text-center mb-5 reveal">
+                    <h2 class="fw-bold">Our Journey</h2>
+                    <p class="text-muted">From a garage project to a city icon.</p>
+                </div>
+                <div class="row g-4 position-relative">
+                    <div class="col-lg-4">
+                        <div class="p-4 rounded-4 contrast-box h-100 reveal">
+                            <span class="badge bg-primary mb-3">2024</span>
+                            <h4 class="h5 fw-bold">The Beginning</h4>
+                            <p class="text-muted small">Started in a small garage with just 2 VR headsets and a dream to
+                                bring immersive tech to locals.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="p-4 rounded-4 contrast-box h-100 reveal reveal-delay-200">
+                            <span class="badge bg-secondary mb-3">2025</span>
+                            <h4 class="h5 fw-bold">Expansion</h4>
+                            <p class="text-muted small">Moved to our current 5000 sq ft location, adding the Free Roam
+                                Arena and 10 new simulator pods.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="p-4 rounded-4 contrast-box h-100 reveal reveal-delay-300">
+                            <span class="badge bg-success mb-3">2026</span>
+                            <h4 class="h5 fw-bold">The Future</h4>
+                            <p class="text-muted small">Launching the Mixed Reality Lab and partnering with schools for
+                                educational VR programs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 2: MEET THE TEAM (Game Masters) -->
+        <section class="py-5 bg-dark position-relative overflow-hidden">
+            <!-- Background Image with Overlay -->
+            <div class="position-absolute top-0 start-0 w-100 h-100"
+                style="background: url('https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=2165&auto=format&fit=crop') center/cover; opacity: 0.1;">
+            </div>
+
+            <div class="container position-relative z-2">
+                <div class="text-center mb-5 reveal">
+                    <h2 class="fw-bold">Meet The Game Masters</h2>
+                    <p class="text-muted">The experts ensuring your reality is glitch-free.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4 col-6">
+                        <div class="card bg-black border-0 h-100 reveal hover-scale">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop"
+                                class="card-img-top object-fit-cover" style="height: 300px;" alt="Team Member">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="fw-bold text-white">Alex Chen</h5>
+                                <p class="text-primary small mt-auto mb-0">Technical Director</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="card bg-black border-0 h-100 reveal reveal-delay-200 hover-scale">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop"
+                                class="card-img-top object-fit-cover" style="height: 300px;" alt="Team Member">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="fw-bold text-white">Sarah Johnson</h5>
+                                <p class="text-secondary small mt-auto mb-0">Lead Game Master</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 offset-3 offset-md-0">
+                        <div class="card bg-black border-0 h-100 reveal reveal-delay-300 hover-scale">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974&auto=format&fit=crop"
+                                class="card-img-top object-fit-cover" style="height: 300px;" alt="Team Member">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="fw-bold text-white">Mike Ross</h5>
+                                <p class="text-success small mt-auto mb-0">Esports Coordinator</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 3: TESTIMONIALS -->
+        <section class="py-5">
+            <div class="container py-lg-5">
+                <div class="text-center mb-5 reveal">
+                    <i class="bi bi-star-fill text-warning fs-3"></i>
+                    <i class="bi bi-star-fill text-warning fs-3"></i>
+                    <i class="bi bi-star-fill text-warning fs-3"></i>
+                    <i class="bi bi-star-fill text-warning fs-3"></i>
+                    <i class="bi bi-star-fill text-warning fs-3"></i>
+                    <h2 class="fw-bold mt-3">Player Reviews</h2>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div
+                                        class="text-center p-5 rounded-4 bg-dark bg-opacity-25 border border-secondary border-opacity-10">
+                                        <p class="lead fst-italic mb-4">"Absolutely mind-blowing. The free-roam arena
+                                            feels incredibly real. My friends and I haven't stopped talking about it for
+                                            weeks!"</p>
+                                        <h5 class="fw-bold text-primary">Jessica T.</h5>
+                                        <small class="text-muted">Pro Gamer</small>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div
+                                        class="text-center p-5 rounded-4 bg-dark bg-opacity-25 border border-secondary border-opacity-10">
+                                        <p class="lead fst-italic mb-4">"Best birthday party ever. The staff took care
+                                            of everything and the equipment was top notch. Highly recommend the Zombie
+                                            Survival mode."</p>
+                                        <h5 class="fw-bold text-secondary">David K.</h5>
+                                        <small class="text-muted">Local Guide</small>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div
+                                        class="text-center p-5 rounded-4 bg-dark bg-opacity-25 border border-secondary border-opacity-10">
+                                        <p class="lead fst-italic mb-4">"A glimpse into the future. I tried the Mixed
+                                            Reality Lab for my architecture project and it was a game changer."</p>
+                                        <h5 class="fw-bold text-success">Elena R.</h5>
+                                        <small class="text-muted">Architect</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <!-- Column 1: Brand -->
+                <div class="col-lg-4 col-md-6 text-center text-md-start">
+                    <a href="index.html" class="footer-brand">
+                        <i class="bi bi-headset-vr text-gradient"></i> VR <span>ARCADE</span>
+                    </a>
+                    <p class="small text-muted mb-4">
+                        Bringing the future of entertainment to your doorstep. Experience VR like never before.
+                    </p>
+                    <div class="footer-social justify-content-center justify-content-md-start">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Company -->
+                <div class="col-lg-2 col-md-6 col-6 footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="pricing.html">Pricing Plans</a></li>
+                        <li><a href="blog.html">News & Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Support -->
+                <div class="col-lg-2 col-md-6 col-6 footer-links">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="service-details.html">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="col-lg-4 col-md-6 footer-links">
+                    <h5>Newsletter</h5>
+                    <p class="small text-muted">Subscribe to get the latest updates and offers.</p>
+                    <form action="#" class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-4 border-top border-secondary border-opacity-25">
+                <div class="col-12 text-center text-muted small">
+                    <p class="mb-0">© <span id="year">2026</span> VR Arcade. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

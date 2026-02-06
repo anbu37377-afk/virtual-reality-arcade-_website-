@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details | VR Arcade</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <!-- 1. Logo + Brand Name -->
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi bi-headset-vr text-gradient"></i>
+                    VR <span>ARCADE</span>
+                </a>
+
+                <!-- 2. Desktop Navigation (Centered) -->
+                <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
+                    <ul class="desktop-nav">
+                        <li><a class="nav-link" href="index.html">Home</a></li>
+                        <li><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li><a class="nav-link" href="about.html">About</a></li>
+                        <li><a class="nav-link active" href="services.html">Services</a></li>
+                        <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <!-- 3. Desktop Actions (Right) -->
+                <div class="d-none d-lg-flex desktop-actions">
+                    <button class="theme-switch-desktop" title="Toggle Theme">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-login">Login</a>
+                    <a href="register.html" class="btn btn-primary">Sign Up</a>
+                </div>
+
+                <!-- 4. Anti-Gravity Floating Trigger (Mobile Only) -->
+                <button class="navbar-toggler antigravity-menu-trigger border-0 d-lg-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <!-- 5. Anti-Gravity Floating Panel (Shared for Mobile/Tablet) -->
+                <div class="offcanvas offcanvas-end antigravity-panel" tabindex="-1" id="offcanvasNavbar"
+                    data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header justify-content-between align-items-center">
+                        <h5 class="offcanvas-title font-monospace text-gradient" id="offcanvasNavbarLabel">COMMAND
+                            CENTER</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <!-- Futuristic Navigation -->
+                        <ul class="antigravity-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="home-2.html">Home 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-primary" href="dashboard.html">
+                                    <i class="bi bi-cpu-fill me-2"></i>Dashboard
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Anti-Gravity Footer (Theme + Auth) -->
+                        <div class="antigravity-footer">
+                            <div class="theme-switchers-group">
+                                <button class="theme-switch-btn" id="theme-light-btn">
+                                    <i class="bi bi-sun-fill"></i> Light
+                                </button>
+                                <button class="theme-switch-btn" id="theme-dark-btn">
+                                    <i class="bi bi-moon-stars-fill"></i> Dark
+                                </button>
+                            </div>
+
+                            <div class="antigravity-auth-group">
+                                <a href="login.html" class="btn btn-antigravity-login">Login Access</a>
+                                <a href="register.html" class="btn btn-primary">Join Universe</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Breadcrumb / Header -->
+        <section class="py-5 mt-5 bg-dark border-bottom border-secondary border-opacity-25">
+            <div class="container py-4">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"
+                                class="text-secondary text-decoration-none">Home</a></li>
+                        <li class="breadcrumb-item"><a href="services.html"
+                                class="text-secondary text-decoration-none">Services</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Free Roam Arena</li>
+                    </ol>
+                </nav>
+                <h1 class="display-5 fw-bold">Free Roam Arena Details</h1>
+            </div>
+        </section>
+
+        <!-- Details Content -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-5">
+
+                    <!-- Left: Description & FAQ -->
+                    <div class="col-lg-8">
+                        <img src="https://images.unsplash.com/photo-1617802690992-15d93263d3a9?q=80&w=2070&auto=format&fit=crop"
+                            class="img-fluid rounded-4 mb-4 shadow" alt="Free Roam Arena">
+
+                        <h2 class="h3 mb-3 brand-font">Immersive Wireless Experience</h2>
+                        <p class="text-muted mb-4">
+                            Experience the ultimate freedom with our Free Roam Arena. Unlike traditional VR where you
+                            are tethered to a computer, our arena uses backpack PCs and inside-out tracking, allowing
+                            you and your friends to move naturally in a large shared space.
+                        </p>
+                        <p class="text-muted mb-4">
+                            Dodge attacks, explore fantasy worlds, and high-five your teammates in the virtual world.
+                            Our arena supports up to 6 players simultaneously with games ranging from zombie shooters to
+                            cooperative puzzle solving.
+                        </p>
+
+                        <h3 class="h4 mt-5 mb-3">Frequently Asked Questions</h3>
+                        <div class="accordion" id="serviceFAQ">
+                            <div class="accordion-item bg-transparent border-secondary border-opacity-25">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent text-white shadow-none"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        Is it safe for children?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#serviceFAQ">
+                                    <div class="accordion-body text-muted">
+                                        Yes, for ages 10 and up. The equipment is lightweight, and the arena is padded.
+                                        We also have game masters monitoring every session.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item bg-transparent border-secondary border-opacity-25">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent text-white shadow-none"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        Can I wear glasses?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#serviceFAQ">
+                                    <div class="accordion-body text-muted">
+                                        Most of our newer headsets accommodate glasses, but we recommend contact lenses
+                                        for the best experience.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item bg-transparent border-secondary border-opacity-25">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent text-white shadow-none"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        How long is a session?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#serviceFAQ">
+                                    <div class="accordion-body text-muted">
+                                        A standard slot is 60 minutes, which includes 10 minutes of briefing/gearing up
+                                        and 50 minutes of playtime.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Booking Form (Sticky) -->
+                    <div class="col-lg-4">
+                        <div class="card border-0 shadow-lg sticky-top" style="top: 100px; z-index: 10;">
+                            <div class="card-body p-4">
+                                <h3 class="h4 mb-4 text-center">Book This Slot</h3>
+
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label text-muted small">Select Date</label>
+                                        <input type="date" class="form-control bg-dark text-white border-secondary">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label text-muted small">Select Time</label>
+                                        <select class="form-select bg-dark text-white border-secondary">
+                                            <option>10:00 AM - 11:00 AM</option>
+                                            <option>11:00 AM - 12:00 PM</option>
+                                            <option>12:00 PM - 01:00 PM</option>
+                                            <option>02:00 PM - 03:00 PM</option>
+                                            <option>03:00 PM - 04:00 PM</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label text-muted small">Number of Players</label>
+                                        <div class="input-group">
+                                            <button class="btn btn-outline-secondary" type="button">-</button>
+                                            <input type="text"
+                                                class="form-control text-center bg-dark text-white border-secondary"
+                                                value="2">
+                                            <button class="btn btn-outline-secondary" type="button">+</button>
+                                        </div>
+                                    </div>
+
+                                    <hr class="border-secondary">
+
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <span>Price per person</span>
+                                        <span>$35.00</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-4 fs-5 fw-bold text-white">
+                                        <span>Total</span>
+                                        <span class="text-primary">$70.00</span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-primary w-100 py-2 fw-bold shadow-lg"
+                                        data-bs-toggle="modal" data-bs-target="#confirmModal">
+                                        Confirm Booking
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 1: HOW IT WORKS (Process) -->
+        <section class="py-5 bg-black bg-opacity-50">
+            <div class="container py-5">
+                <div class="text-center mb-5 reveal">
+                    <h2 class="fw-bold">How It Works</h2>
+                    <p class="text-muted">Simple steps to start your reality shift.</p>
+                </div>
+                <div class="row g-4 text-center position-relative">
+                    <div class="col-md-3">
+                        <div class="p-4 reveal hover-scale">
+                            <span
+                                class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle fs-4 fw-bold mb-3 shadow"
+                                style="width: 60px; height: 60px;">1</span>
+                            <h5 class="fw-bold">Book Online</h5>
+                            <p class="small text-muted">Select your preferred date, time, and number of players.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-4 reveal reveal-delay-100 hover-scale">
+                            <span
+                                class="d-inline-flex align-items-center justify-content-center bg-secondary text-dark rounded-circle fs-4 fw-bold mb-3 shadow"
+                                style="width: 60px; height: 60px;">2</span>
+                            <h5 class="fw-bold">Arrival</h5>
+                            <p class="small text-muted">Arrive 15 mins early for a safety briefing and gear fitting.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-4 reveal reveal-delay-200 hover-scale">
+                            <span
+                                class="d-inline-flex align-items-center justify-content-center bg-white text-dark rounded-circle fs-4 fw-bold mb-3 shadow"
+                                style="width: 60px; height: 60px;">3</span>
+                            <h5 class="fw-bold">Gear Up</h5>
+                            <p class="small text-muted">Put on your backpack PC and headset with staff help.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-4 reveal reveal-delay-300 hover-scale">
+                            <span
+                                class="d-inline-flex align-items-center justify-content-center bg-success text-white rounded-circle fs-4 fw-bold mb-3 shadow"
+                                style="width: 60px; height: 60px;">4</span>
+                            <h5 class="fw-bold">Play</h5>
+                            <p class="small text-muted">Enter the arena and enjoy 50 mins of non-stop action.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 2: TECHNICAL SPECS -->
+        <section class="py-5">
+            <div class="container py-4">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5">
+                        <h2 class="fw-bold mb-4 reveal">Technical <span class="text-primary">Specifications</span></h2>
+                        <p class="text-muted mb-4 reveal">We don't cut corners on hardware. Experience the highest
+                            fidelity VR currently possible.</p>
+
+                        <div class="d-flex align-items-center mb-3 reveal">
+                            <i class="bi bi-cpu fs-3 text-secondary me-3"></i>
+                            <div>
+                                <h6 class="fw-bold mb-0">Processor</h6>
+                                <span class="text-muted small">Intel Core i9 + RTX 4090 Backpack PCs</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3 reveal reveal-delay-100">
+                            <i class="bi bi-eye fs-3 text-secondary me-3"></i>
+                            <div>
+                                <h6 class="fw-bold mb-0">Visuals</h6>
+                                <span class="text-muted small">5K Resolution per eye @ 120Hz</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center reveal reveal-delay-200">
+                            <i class="bi bi-arrows-move fs-3 text-secondary me-3"></i>
+                            <div>
+                                <h6 class="fw-bold mb-0">Tracking</h6>
+                                <span class="text-muted small">Sub-millimeter precision inside-out tracking</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div
+                            class="table-responsive bg-dark rounded-4 p-4 border border-secondary border-opacity-10 reveal">
+                            <table class="table table-dark table-borderless mb-0 align-middle">
+                                <tbody>
+                                    <tr class="border-bottom border-secondary border-opacity-25">
+                                        <td class="text-muted py-3">Latency</td>
+                                        <td class="fw-bold text-end py-3">
+                                            < 20ms</td>
+                                    </tr>
+                                    <tr class="border-bottom border-secondary border-opacity-25">
+                                        <td class="text-muted py-3">Play Area</td>
+                                        <td class="fw-bold text-end py-3">2000 sq ft</td>
+                                    </tr>
+                                    <tr class="border-bottom border-secondary border-opacity-25">
+                                        <td class="text-muted py-3">Audio</td>
+                                        <td class="fw-bold text-end py-3">3D Spatial Audio</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-muted py-3">Haptics</td>
+                                        <td class="fw-bold text-end py-3">bHaptics Vest Support</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 3: YOU MIGHT ALSO LIKE -->
+        <section class="py-5 bg-dark border-top border-secondary border-opacity-25">
+            <div class="container py-4">
+                <h3 class="fw-bold mb-4 reveal">You Might Also Like</h3>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <a href="#"
+                            class="text-decoration-none card h-100 bg-black border border-secondary border-opacity-25 hover-scale reveal">
+                            <div class="row g-0 h-100">
+                                <div class="col-4">
+                                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop"
+                                        class="img-fluid rounded-start h-100 object-fit-cover" alt="Escape Room">
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body d-flex flex-column h-100 justify-content-center">
+                                        <h5 class="card-title text-white fw-bold">VR Escape Room</h5>
+                                        <p class="card-text text-muted small">Solve puzzles together.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="#"
+                            class="text-decoration-none card h-100 bg-black border border-secondary border-opacity-25 hover-scale reveal reveal-delay-100">
+                            <div class="row g-0 h-100">
+                                <div class="col-4">
+                                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=2070&auto=format&fit=crop"
+                                        class="img-fluid rounded-start h-100 object-fit-cover" alt="Racing">
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body d-flex flex-column h-100 justify-content-center">
+                                        <h5 class="card-title text-white fw-bold">Racing Sim</h5>
+                                        <p class="card-text text-muted small">High speed adrenaline.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Confirm Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark border border-secondary text-white">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title">Booking Confirmation</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <i class="bi bi-check-circle text-success display-1 mb-3"></i>
+                    <h4 class="mb-2">Success!</h4>
+                    <p class="text-muted">Your request for Free Roam Arena has been received. Please check your email
+                        for payment instructions.</p>
+                </div>
+                <div class="modal-footer border-secondary justify-content-center">
+                    <button type="button" class="btn btn-primary px-4" data-bs-dismiss="modal">OK, Got it</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <!-- Column 1: Brand -->
+                <div class="col-lg-4 col-md-6 text-center text-md-start">
+                    <a href="index.html" class="footer-brand">
+                        <i class="bi bi-headset-vr text-gradient"></i> VR <span>ARCADE</span>
+                    </a>
+                    <p class="small text-muted mb-4">
+                        Bringing the future of entertainment to your doorstep. Experience VR like never before.
+                    </p>
+                    <div class="footer-social justify-content-center justify-content-md-start">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Company -->
+                <div class="col-lg-2 col-md-6 col-6 footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="pricing.html">Pricing Plans</a></li>
+                        <li><a href="blog.html">News & Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Support -->
+                <div class="col-lg-2 col-md-6 col-6 footer-links">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="service-details.html">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="col-lg-4 col-md-6 footer-links">
+                    <h5>Newsletter</h5>
+                    <p class="small text-muted">Subscribe to get the latest updates and offers.</p>
+                    <form action="#" class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-4 border-top border-secondary border-opacity-25">
+                <div class="col-12 text-center text-muted small">
+                    <p class="mb-0">© <span id="year">2026</span> VR Arcade. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

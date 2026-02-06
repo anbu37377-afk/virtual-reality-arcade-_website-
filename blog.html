@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | VR News & Updates</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <!-- 1. Logo + Brand Name -->
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi bi-headset-vr text-gradient"></i>
+                    VR <span>ARCADE</span>
+                </a>
+
+                <!-- 2. Desktop Navigation (Centered) -->
+                <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
+                    <ul class="desktop-nav">
+                        <li><a class="nav-link" href="index.html">Home</a></li>
+                        <li><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li><a class="nav-link" href="about.html">About</a></li>
+                        <li><a class="nav-link" href="services.html">Services</a></li>
+                        <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li><a class="nav-link active" href="blog.html">Blog</a></li>
+                        <li><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <!-- 3. Desktop Actions (Right) -->
+                <div class="d-none d-lg-flex desktop-actions">
+                    <button class="theme-switch-desktop" title="Toggle Theme">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-login">Login</a>
+                    <a href="register.html" class="btn btn-primary">Sign Up</a>
+                </div>
+
+                <!-- 4. Anti-Gravity Floating Trigger (Mobile Only) -->
+                <button class="navbar-toggler antigravity-menu-trigger border-0 d-lg-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <!-- 5. Anti-Gravity Floating Panel (Shared for Mobile/Tablet) -->
+                <div class="offcanvas offcanvas-end antigravity-panel" tabindex="-1" id="offcanvasNavbar"
+                    data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header justify-content-between align-items-center">
+                        <h5 class="offcanvas-title font-monospace text-gradient" id="offcanvasNavbarLabel">COMMAND
+                            CENTER</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <!-- Futuristic Navigation -->
+                        <ul class="antigravity-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="home-2.html">Home 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-primary" href="dashboard.html">
+                                    <i class="bi bi-cpu-fill me-2"></i>Dashboard
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Anti-Gravity Footer (Theme + Auth) -->
+                        <div class="antigravity-footer">
+                            <div class="theme-switchers-group">
+                                <button class="theme-switch-btn" id="theme-light-btn">
+                                    <i class="bi bi-sun-fill"></i> Light
+                                </button>
+                                <button class="theme-switch-btn" id="theme-dark-btn">
+                                    <i class="bi bi-moon-stars-fill"></i> Dark
+                                </button>
+                            </div>
+
+                            <div class="antigravity-auth-group">
+                                <a href="login.html" class="btn btn-antigravity-login">Login Access</a>
+                                <a href="register.html" class="btn btn-primary">Join Universe</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="py-5 mt-5 border-bottom border-secondary border-opacity-25 blog-hero-section">
+            <div class="container py-5 text-center blog-hero-content">
+                <h1 class="display-4 fw-bold">Latest VR News</h1>
+                <p class="lead text-muted">Updates from the metaverse and our arcade.</p>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-5">
+
+                    <!-- Content Area -->
+                    <div class="col-lg-8">
+
+                        <!-- Search & Filter (Mobile & Tablet) Removed to use unified Sidebar -->
+
+                        <!-- Post 1 -->
+                        <div class="card bg-transparent border-0 mb-5">
+                            <a href="blog-details.html">
+                                <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=2078&auto=format&fit=crop"
+                                    class="card-img-top rounded-4 mb-3" alt="Blog Image"
+                                    style="height: 400px; object-fit: cover;">
+                            </a>
+                            <div class="card-body px-0">
+                                <div class="d-flex gap-3 mb-2 text-primary small fw-bold">
+                                    <span>GAMES</span>
+                                    <span>•</span>
+                                    <span>OCT 24, 2026</span>
+                                </div>
+                                <h2 class="card-title h3 mb-3"><a href="blog-details.html"
+                                        class="text-reset text-decoration-none hover-primary">Top 10 Scary VR Games for
+                                        Halloween</a></h2>
+                                <p class="card-text text-muted">Halloween is just around the corner, and we have curated
+                                    a list of the most terrifying VR experiences available at our arcade. From jump
+                                    scares to psychological horror...</p>
+                                <div class="text-center">
+                                    <a href="blog-details.html"
+                                        class="btn btn-link text-primary p-0 text-decoration-none">Read More <i
+                                            class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Post 2 -->
+                        <div class="card bg-transparent border-0 mb-5">
+                            <a href="blog-details.html">
+                                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
+                                    class="card-img-top rounded-4 mb-3" alt="Blog Image"
+                                    style="height: 400px; object-fit: cover;">
+                            </a>
+                            <div class="card-body px-0">
+                                <div class="d-flex gap-3 mb-2 text-primary small fw-bold">
+                                    <span>TECH</span>
+                                    <span>•</span>
+                                    <span>OCT 20, 2026</span>
+                                </div>
+                                <h2 class="card-title h3 mb-3"><a href="blog-details.html"
+                                        class="text-reset text-decoration-none hover-primary">The New Omni-Directional
+                                        Treadmill Arrives</a></h2>
+                                <p class="card-text text-muted">We are excited to announce the arrival of the Virtuix
+                                    Omni One at our arcade. Now you can run, jump, and crouch in VR without hitting a
+                                    wall.</p>
+                                <div class="text-center">
+                                    <a href="blog-details.html"
+                                        class="btn btn-link text-primary p-0 text-decoration-none">Read More <i
+                                            class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled"><a class="page-link bg-dark text-muted border-secondary"
+                                        href="#">Previous</a></li>
+                                <li class="page-item active"><a class="page-link bg-primary border-primary text-white"
+                                        href="#">1</a></li>
+                                <li class="page-item"><a class="page-link bg-dark text-white border-secondary"
+                                        href="#">2</a></li>
+                                <li class="page-item"><a class="page-link bg-dark text-white border-secondary"
+                                        href="#">3</a></li>
+                                <li class="page-item"><a class="page-link bg-dark text-white border-secondary"
+                                        href="#">Next</a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="sticky-top" style="top: 100px;">
+
+                            <!-- Search -->
+                            <div class="mb-5">
+                                <h4 class="h5 mb-3">Search</h4>
+                                <div class="input-group">
+                                    <input type="text" class="form-control bg-dark border-secondary text-white"
+                                        placeholder="Type here...">
+                                    <button class="btn btn-outline-secondary" type="button"><i
+                                            class="bi bi-search"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Categories -->
+                            <div class="mb-5">
+                                <h4 class="h5 mb-3">Categories</h4>
+                                <ul class="list-group list-group-flush">
+                                    <li
+                                        class="list-group-item bg-transparent text-muted border-secondary d-flex justify-content-between align-items-center">
+                                        Games <span class="badge bg-secondary text-dark rounded-pill">14</span>
+                                    </li>
+                                    <li
+                                        class="list-group-item bg-transparent text-muted border-secondary d-flex justify-content-between align-items-center">
+                                        Technology <span class="badge bg-secondary text-dark rounded-pill">8</span>
+                                    </li>
+                                    <li
+                                        class="list-group-item bg-transparent text-muted border-secondary d-flex justify-content-between align-items-center">
+                                        Events <span class="badge bg-secondary text-dark rounded-pill">5</span>
+                                    </li>
+                                    <li
+                                        class="list-group-item bg-transparent text-muted border-secondary d-flex justify-content-between align-items-center">
+                                        Tips & Tricks <span class="badge bg-secondary text-dark rounded-pill">3</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Newsletter -->
+                            <div class="p-4 bg-dark rounded-4 border border-secondary border-opacity-25">
+                                <h4 class="h5 mb-2">Subscribe</h4>
+                                <p class="small text-muted mb-3">Get the latest news delivered to your inbox.</p>
+                                <input type="email" class="form-control bg-transparent border-secondary text-white mb-2"
+                                    placeholder="Email">
+                                <button class="btn btn-primary w-100">Subscribe</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 1: EDITOR'S PICK -->
+        <section class="py-5 bg-dark border-top border-bottom border-secondary border-opacity-25 editors-pick-section">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="position-relative hover-scale reveal editors-pick-media">
+                            <a href="blog-details.html">
+                                <img src="https://img.freepik.com/premium-photo/computer-keyboard-mouse-joystick-black-background_93675-157805.jpg"
+                                    class="img-fluid rounded-4 shadow-lg editors-pick-img" alt="Editors Pick">
+                            </a>
+                            <div
+                                class="position-absolute top-0 start-0 m-3 px-3 py-1 bg-primary text-white rounded-pill fw-bold small">
+                                EDITOR'S PICK</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 ps-lg-5">
+                        <span class="text-secondary fw-bold small letter-spacing-2 reveal">MUST READ</span>
+                        <h2 class="display-6 fw-bold mt-2 mb-3 reveal">The Future of Haptics in 2026</h2>
+                        <p class="text-muted mb-4 reveal">
+                            We tried the latest TeslaSuit prototype and it changes everything. Feel rain, wind, and even
+                            impact with alarming realism.
+                            Is this the final frontier for immersion?
+                        </p>
+                        <div class="text-center">
+                            <a href="blog-details.html" class="btn btn-outline-light rounded-pill px-4 reveal">Read Full
+                                Review</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 2: TRENDING TOPICS CLOUD -->
+        <section class="py-5">
+            <div class="container text-center py-4">
+                <h3 class="fw-bold mb-4 reveal">Trending Topics</h3>
+                <div class="d-flex flex-wrap justify-content-center gap-3 reveal">
+                    <a href="#" class="btn btn-outline-secondary rounded-pill hover-primary">#BeatSaber</a>
+                    <a href="#" class="btn btn-outline-secondary rounded-pill hover-primary">#Quest3</a>
+                    <a href="#" class="btn btn-outline-secondary rounded-pill hover-primary">#HorrorVR</a>
+                    <a href="#" class="btn btn-outline-secondary rounded-pill hover-primary">#Metaverse</a>
+                    <a href="#" class="btn btn-outline-secondary rounded-pill hover-primary">#Esports</a>
+                    <a href="#" class="btn btn-outline-secondary rounded-pill hover-primary">#MedicalVR</a>
+                    <a href="#" class="btn btn-outline-secondary rounded-pill hover-primary">#UnityDev</a>
+                    <a href="#" class="btn btn-outline-secondary rounded-pill hover-primary">#VRChat</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 3: COMMUNITY POLL -->
+        <section class="py-5 bg-black bg-opacity-50">
+            <div class="container justify-content-center d-flex">
+                <div class="card bg-dark border border-secondary border-opacity-25 p-5 rounded-5 shadow-lg mw-100 reveal"
+                    style="width: 800px;">
+                    <div class="text-center mb-4">
+                        <i class="bi bi-bar-chart-line text-primary fs-1"></i>
+                        <h3 class="fw-bold mt-3">Community Poll</h3>
+                        <p class="text-muted">What's your most anticipated VR title for 2027?</p>
+                    </div>
+                    <div class="d-grid gap-3">
+                        <button
+                            class="btn btn-outline-light text-start p-3 rounded-3 position-relative overflow-hidden group">
+                            <span class="position-relative z-2">Half-Life 3: VR Edition</span>
+                            <div class="position-absolute top-0 start-0 h-100 bg-primary opacity-25"
+                                style="width: 45%;"></div>
+                            <span
+                                class="position-absolute end-0 top-50 translate-middle-y me-3 opacity-50 small">45%</span>
+                        </button>
+                        <button
+                            class="btn btn-outline-light text-start p-3 rounded-3 position-relative overflow-hidden">
+                            <span class="position-relative z-2">GTA VI VR Mode</span>
+                            <div class="position-absolute top-0 start-0 h-100 bg-secondary opacity-25"
+                                style="width: 30%;"></div>
+                            <span
+                                class="position-absolute end-0 top-50 translate-middle-y me-3 opacity-50 small">30%</span>
+                        </button>
+                        <button
+                            class="btn btn-outline-light text-start p-3 rounded-3 position-relative overflow-hidden">
+                            <span class="position-relative z-2">Elder Scrolls VI VR</span>
+                            <div class="position-absolute top-0 start-0 h-100 bg-success opacity-25"
+                                style="width: 25%;"></div>
+                            <span
+                                class="position-absolute end-0 top-50 translate-middle-y me-3 opacity-50 small">25%</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <!-- Column 1: Brand -->
+                <div class="col-lg-4 col-md-6 text-center text-md-start">
+                    <a href="index.html" class="footer-brand">
+                        <i class="bi bi-headset-vr text-gradient"></i> VR <span>ARCADE</span>
+                    </a>
+                    <p class="small text-muted mb-4">
+                        Bringing the future of entertainment to your doorstep. Experience VR like never before.
+                    </p>
+                    <div class="footer-social justify-content-center justify-content-md-start">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Company -->
+                <div class="col-lg-2 col-md-6 col-6 footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="pricing.html">Pricing Plans</a></li>
+                        <li><a href="blog.html">News & Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Support -->
+                <div class="col-lg-2 col-md-6 col-6 footer-links">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="service-details.html">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="col-lg-4 col-md-6 footer-links">
+                    <h5>Newsletter</h5>
+                    <p class="small text-muted">Subscribe to get the latest updates and offers.</p>
+                    <form action="#" class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-4 border-top border-secondary border-opacity-25">
+                <div class="col-12 text-center text-muted small">
+                    <p class="mb-0">© <span id="year">2026</span> VR Arcade. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
