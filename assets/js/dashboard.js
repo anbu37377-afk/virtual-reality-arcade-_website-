@@ -23,10 +23,22 @@ document.addEventListener('DOMContentLoaded', function () {
         sidebar.classList.toggle('active', willOpen);
         overlay.classList.toggle('active', willOpen);
         document.body.classList.toggle('dashboard-sidebar-open', willOpen);
+        console.log('Sidebar toggled:', willOpen ? 'OPEN' : 'CLOSED');
     }
 
     if (toggler) {
         toggler.addEventListener('click', toggleSidebar);
+        console.log('Sidebar toggler initialized');
+    } else {
+        console.warn('Sidebar toggler button not found!');
+        // Retry after a short delay in case of timing issues
+        setTimeout(() => {
+            const retryToggler = document.querySelector('.sidebar-toggler');
+            if (retryToggler) {
+                retryToggler.addEventListener('click', toggleSidebar);
+                console.log('Sidebar toggler initialized (retry)');
+            }
+        }, 100);
     }
 
     // Close when clicking overlay

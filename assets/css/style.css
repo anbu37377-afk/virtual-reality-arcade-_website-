@@ -36,14 +36,90 @@
 
 /* Universal fix for forced dark sections (bg-dark, bg-black) across all themes */
 /* Universal fix for forced dark sections (bg-dark, bg-black) across all themes */
+/* Universal fix for forced dark sections (bg-dark, bg-black, bg-primary) across all themes */
 [data-bs-theme="light"] .bg-dark,
 [data-bs-theme="light"] .bg-black,
+[data-bs-theme="light"] .bg-primary,
 [data-bs-theme="light"] footer,
 .bg-dark,
 .bg-black,
+.bg-primary,
 footer {
-    background-color: var(--dark-bg) !important;
     color: #ffffff !important;
+}
+
+[data-bs-theme="light"] .bg-dark,
+[data-bs-theme="light"] .bg-black,
+.bg-dark,
+.bg-black {
+    background-color: var(--dark-bg) !important;
+}
+
+[data-bs-theme="light"] .bg-primary,
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+/* Ensure all text elements inside dark sections are white/light */
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4,
+.bg-dark h5,
+.bg-dark h6,
+.bg-black h1,
+.bg-black h2,
+.bg-black h3,
+.bg-black h4,
+.bg-black h5,
+.bg-black h6,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary h4,
+.bg-primary h5,
+.bg-primary h6,
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6,
+.bg-dark p,
+.bg-black p,
+.bg-primary p,
+footer p,
+.bg-dark li,
+.bg-black li,
+.bg-primary li,
+footer li {
+    color: #ffffff !important;
+}
+
+.bg-dark .text-muted,
+.bg-black .text-muted,
+.bg-primary .text-muted,
+footer .text-muted {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.bg-dark .lead,
+.bg-black .lead,
+.bg-primary .lead,
+footer .lead {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Maintain primary color for spans and icons where intended */
+.bg-dark .text-primary,
+.bg-black .text-primary,
+.bg-primary .text-primary,
+footer .text-primary,
+.bg-dark i.text-primary,
+.bg-black i.text-primary,
+.bg-primary i.text-primary,
+footer i.text-primary {
+    color: var(--primary-color) !important;
 }
 
 [data-bs-theme="light"] .bg-dark h1,
@@ -143,9 +219,41 @@ footer a:not(.btn):not(.footer-brand):not(.social-link):hover {
     opacity: 1 !important;
 }
 
-[data-bs-theme="light"] .footer-brand,
+/* Ensure brand consistency */
+.navbar-brand,
 .footer-brand {
-    color: #ffffff !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 1.4rem !important;
+    font-weight: 800 !important;
+    color: var(--text-color) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    text-decoration: none !important;
+}
+
+.navbar-brand i,
+.footer-brand i {
+    font-size: 1.6rem !important;
+}
+
+.navbar-brand span,
+.footer-brand span {
+    color: var(--primary-color) !important;
+}
+
+/* Specific fix for light mode footer visibility while maintaining header color */
+/* Specific fix for light mode footer visibility while maintaining header color */
+[data-bs-theme="light"] footer .footer-brand {
+    color: #000000 !important;
+}
+
+[data-bs-theme="light"] footer .footer-brand span {
+    color: var(--primary-color) !important;
+}
+
+[data-bs-theme="light"] .navbar-brand {
+    color: var(--text-color) !important;
 }
 
 /* Fix for Details button visibility in Light Mode */
@@ -244,8 +352,8 @@ section,
 main .container,
 section .container,
 .hero-section,
-body > main,
-body > section {
+body>main,
+body>section {
     position: relative;
     z-index: 300 !important;
     pointer-events: auto !important;
@@ -841,11 +949,12 @@ a {
     backdrop-filter: blur(10px);
     height: var(--nav-height);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-    z-index: 500;
-    /* Highest z-index to ensure header is always visible and accessible */
+    z-index: 1030;
+    /* High z-index to stay above content while scrolling */
     transition: all 0.3s ease;
     pointer-events: auto;
-    position: relative;
+    position: sticky;
+    top: 0;
 }
 
 /* Custom Container for Wide Layout */
@@ -882,26 +991,6 @@ a {
 .navbar-toggler:focus {
     box-shadow: none;
     /* Remove default bootstrap focus ring */
-}
-
-.navbar-brand {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.25rem;
-    /* Reduced from 1.5rem */
-    font-weight: 800;
-    color: var(--text-color);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.navbar-brand i {
-    font-size: 1.4rem;
-    /* Matching smaller text */
-}
-
-.navbar-brand span {
-    color: var(--primary-color);
 }
 
 /* Offcanvas Menu Styling */
@@ -1309,8 +1398,8 @@ a {
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     transform: translateX(0);
     transition: transform 0.3s ease;
-    z-index: 50;
-    /* Much lower than content to allow middle-page buttons to work */
+    z-index: 150;
+    /* Higher than overlay (100) to ensure sidebar is clickable on mobile */
     overflow-y: auto;
     padding: 20px;
 }
@@ -1367,14 +1456,61 @@ a {
     font-size: 1.2rem;
 }
 
+/* Ensure sidebar is visible in Light Mode */
+[data-bs-theme="light"] .sidebar {
+    background-color: #ffffff;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure sidebar menu text is visible in Light Mode */
+[data-bs-theme="light"] .sidebar-menu a {
+    color: #000000;
+}
+
+[data-bs-theme="light"] .sidebar-menu a:hover,
+[data-bs-theme="light"] .sidebar-menu a.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Ensure brand text is visible */
+[data-bs-theme="light"] .sidebar-brand {
+    color: #000000 !important;
+}
+
+/* Dark Mode sidebar styling */
+[data-bs-theme="dark"] .sidebar {
+    background-color: #151725;
+}
+
+[data-bs-theme="dark"] .sidebar-menu a {
+    color: #e0e0e0;
+}
+
 /* Dashboard Responsive */
 .sidebar-toggler {
     display: none;
     background: none;
-    border: none;
+    border: 2px solid var(--text-color);
     color: var(--text-color);
     font-size: 1.5rem;
     cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.sidebar-toggler:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+.sidebar-toggler:active {
+    transform: scale(0.95);
 }
 
 @media (max-width: 991px) {
@@ -1383,10 +1519,12 @@ a {
         left: 0;
         transform: translateX(-100%);
         /* Hidden off-canvas by default on tablet/mobile */
+        z-index: 1050;
+        /* High z-index to overlay everything */
     }
 
     .sidebar.active {
-        transform: translateX(0);
+        transform: translateX(0) !important;
     }
 
     .main-content {
@@ -1410,7 +1548,8 @@ a {
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
-        z-index: 100;
+        z-index: 1040;
+        /* Below sidebar (1050) but above content */
         /* Much lower than footer to allow footer interaction */
     }
 
@@ -1452,15 +1591,7 @@ footer {
 }
 
 .footer-brand {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: var(--text-color);
     margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
     transition: transform 0.3s ease;
 }
 
@@ -1468,12 +1599,80 @@ footer {
     transform: translateX(5px);
 }
 
-.footer-brand i {
-    font-size: 1.6rem;
+/* Light Mode Footer Styling */
+[data-bs-theme="light"] footer {
+    background-color: #ffffff !important;
+    border-top: 1px solid #e5e7eb !important;
+    color: #000000 !important;
 }
 
-.footer-brand span {
-    color: var(--primary-color);
+/* Stronger selector to override the complex footer link styles */
+[data-bs-theme="light"] footer a:not(.btn):not(.footer-brand):not(.social-link),
+[data-bs-theme="light"] .footer-links a {
+    color: #000000 !important;
+    opacity: 0.7;
+}
+
+[data-bs-theme="light"] footer a:not(.btn):not(.footer-brand):not(.social-link):hover,
+[data-bs-theme="light"] .footer-links a:hover {
+    color: var(--primary-color) !important;
+    opacity: 1;
+}
+
+/* Ensure all paragraph text in footer is visible */
+[data-bs-theme="light"] footer p,
+[data-bs-theme="light"] footer li {
+    color: #000000 !important;
+    opacity: 0.8;
+}
+
+/* Specific override for text-muted in footer */
+[data-bs-theme="light"] footer .text-muted,
+[data-bs-theme="light"] footer .small.text-muted {
+    color: #6c757d !important;
+    opacity: 1;
+}
+
+[data-bs-theme="light"] footer .small.text-muted,
+[data-bs-theme="light"] footer .text-muted {
+    color: #6c757d !important;
+}
+
+[data-bs-theme="light"] footer .input-group {
+    background: #f8f9fa !important;
+    border: 1px solid #dee2e6 !important;
+}
+
+[data-bs-theme="light"] footer .form-control {
+    color: #000 !important;
+    background: transparent !important;
+}
+
+[data-bs-theme="light"] footer .form-control::placeholder {
+    color: #6c757d !important;
+}
+
+/* Ensure footer headings are visible */
+[data-bs-theme="light"] footer h5 {
+    color: #000000 !important;
+}
+
+/* Fix social icons visibility in light mode */
+[data-bs-theme="light"] .footer-social .social-link {
+    background-color: #f8f9fa !important;
+    border: 1px solid #dee2e6 !important;
+    color: #000000 !important;
+}
+
+[data-bs-theme="light"] .footer-social .social-link:hover {
+    background-color: var(--primary-color) !important;
+    color: #ffffff !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Ensure copyright text is visible */
+[data-bs-theme="light"] footer .text-center.text-muted p {
+    color: #6c757d !important;
 }
 
 /* Social Icons */
@@ -1628,11 +1827,16 @@ footer {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    z-index: 99;
+    z-index: 9999;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 #back-to-top:hover {
-    background-color: var(--primary-hover);
+    background-color: var(--primary-hover, #7c3aed);
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(140, 82, 255, 0.4);
 }

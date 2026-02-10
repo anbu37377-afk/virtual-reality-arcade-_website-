@@ -178,7 +178,7 @@
                 </div>
                 <div class="row g-4">
                     <div class="col-md-4 text-center">
-                        <div class="p-4 border border-secondary border-opacity-25 rounded-4 h-100">
+                        <div class="p-4 border border-secondary rounded-4 h-100" style="border-width: 2px !important;">
                             <i class="bi bi-cpu fs-1 text-primary mb-3"></i>
                             <h4 class="h5">Next-Gen Hardware</h4>
                             <p class="small text-muted">Powered by RTX 4090s and high-resolution headsets for lag-free,
@@ -186,7 +186,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 text-center">
-                        <div class="p-4 border border-secondary border-opacity-25 rounded-4 h-100">
+                        <div class="p-4 border border-secondary rounded-4 h-100" style="border-width: 2px !important;">
                             <i class="bi bi-shield-check fs-1 text-success mb-3"></i>
                             <h4 class="h5">Hygiene First</h4>
                             <p class="small text-muted">All equipment is UV-C sanitized after every single use.
@@ -194,7 +194,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 text-center">
-                        <div class="p-4 border border-secondary border-opacity-25 rounded-4 h-100">
+                        <div class="p-4 border border-secondary rounded-4 h-100" style="border-width: 2px !important;">
                             <i class="bi bi-person-check fs-1 text-info mb-3"></i>
                             <h4 class="h5">Expert Staff</h4>
                             <p class="small text-muted">Our trained Game Masters are always nearby to help you with
@@ -215,7 +215,9 @@
                 <div class="row g-4 position-relative">
                     <div class="col-lg-4">
                         <div class="p-4 rounded-4 contrast-box h-100 reveal">
-                            <span class="badge bg-primary mb-3">2024</span>
+                            <div class="text-center">
+                                <span class="badge bg-primary mb-3">2024</span>
+                            </div>
                             <h4 class="h5 fw-bold">The Beginning</h4>
                             <p class="text-muted small">Started in a small garage with just 2 VR headsets and a dream to
                                 bring immersive tech to locals.</p>
@@ -223,7 +225,9 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="p-4 rounded-4 contrast-box h-100 reveal reveal-delay-200">
-                            <span class="badge bg-secondary mb-3">2025</span>
+                            <div class="text-center">
+                                <span class="badge bg-secondary mb-3">2025</span>
+                            </div>
                             <h4 class="h5 fw-bold">Expansion</h4>
                             <p class="text-muted small">Moved to our current 5000 sq ft location, adding the Free Roam
                                 Arena and 10 new simulator pods.</p>
@@ -231,7 +235,9 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="p-4 rounded-4 contrast-box h-100 reveal reveal-delay-300">
-                            <span class="badge bg-success mb-3">2026</span>
+                            <div class="text-center">
+                                <span class="badge bg-success mb-3">2026</span>
+                            </div>
                             <h4 class="h5 fw-bold">The Future</h4>
                             <p class="text-muted small">Launching the Mixed Reality Lab and partnering with schools for
                                 educational VR programs.</p>
@@ -257,7 +263,8 @@
                     <div class="col-md-4 col-6">
                         <div class="card bg-black border-0 h-100 reveal hover-scale">
                             <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop"
-                                class="card-img-top object-fit-cover" style="height: 300px;" alt="Team Member">
+                                class="card-img-top object-fit-cover" style="height: 300px; object-position: center;"
+                                alt="Team Member">
                             <div class="card-body text-center d-flex flex-column">
                                 <h5 class="fw-bold text-white">Alex Chen</h5>
                                 <p class="text-primary small mt-auto mb-0">Technical Director</p>
@@ -267,7 +274,8 @@
                     <div class="col-md-4 col-6">
                         <div class="card bg-black border-0 h-100 reveal reveal-delay-200 hover-scale">
                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop"
-                                class="card-img-top object-fit-cover" style="height: 300px;" alt="Team Member">
+                                class="card-img-top object-fit-cover" style="height: 300px; object-position: center;"
+                                alt="Team Member">
                             <div class="card-body text-center d-flex flex-column">
                                 <h5 class="fw-bold text-white">Sarah Johnson</h5>
                                 <p class="text-secondary small mt-auto mb-0">Lead Game Master</p>
@@ -277,7 +285,8 @@
                     <div class="col-md-4 col-6 offset-3 offset-md-0">
                         <div class="card bg-black border-0 h-100 reveal reveal-delay-300 hover-scale">
                             <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974&auto=format&fit=crop"
-                                class="card-img-top object-fit-cover" style="height: 300px;" alt="Team Member">
+                                class="card-img-top object-fit-cover" style="height: 300px; object-position: center;"
+                                alt="Team Member">
                             <div class="card-body text-center d-flex flex-column">
                                 <h5 class="fw-bold text-white">Mike Ross</h5>
                                 <p class="text-success small mt-auto mb-0">Esports Coordinator</p>
@@ -413,6 +422,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" title="Go to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>

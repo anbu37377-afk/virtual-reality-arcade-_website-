@@ -9,6 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- New Fixed Header Styles -->
+    <link rel="stylesheet" href="assets/css/fixed-header.css">
     <style>
         .hero-home-2 {
             background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), transparent), url('https://images.unsplash.com/photo-1626387667886-dfbe2226f399?q=80&w=2070&auto=format&fit=crop');
@@ -231,10 +233,18 @@
 
         <!-- NEW SECTION 2: INDUSTRY SOLUTIONS (Grid + Iconography) -->
         <section class="py-5 bg-dark position-relative overflow-hidden">
+            <!-- Decorative element -->
+            <div
+                class="position-absolute top-50 end-0 translate-middle-y text-secondary opacity-10 pe-5 d-none d-lg-block">
+                <i class="bi bi-buildings" style="font-size: 20rem;"></i>
+            </div>
 
 
             <div class="container py-5 position-relative" style="z-index: 2;">
                 <div class="text-center mb-5 reveal">
+                    <div class="mb-3">
+                        <i class="bi bi-layers-half display-4 text-gradient"></i>
+                    </div>
                     <span class="text-gradient fw-bold text-uppercase letter-spacing-2">Innovation Hub</span>
                     <h2 class="display-5 fw-bold mt-2">Enterprise Solutions</h2>
                     <p class="text-muted mx-auto" style="max-width: 600px;">Accelerate your workflow with immersive
@@ -246,7 +256,7 @@
                         <div
                             class="p-4 rounded-4 bg-black bg-opacity-50 border border-secondary border-opacity-10 h-100 reveal hover-scale">
                             <div
-                                class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 p-3 rounded-circle mb-4 text-primary">
+                                class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 p-3 rounded-circle mb-4 text-white">
                                 <i class="bi bi-buildings fs-2"></i>
                             </div>
                             <h4 class="h5 fw-bold">Architecture</h4>
@@ -257,7 +267,7 @@
                         <div
                             class="p-4 rounded-4 bg-black bg-opacity-50 border border-secondary border-opacity-10 h-100 reveal reveal-delay-100 hover-scale">
                             <div
-                                class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 p-3 rounded-circle mb-4 text-primary">
+                                class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 p-3 rounded-circle mb-4 text-white">
                                 <i class="bi bi-heart-pulse fs-2"></i>
                             </div>
                             <h4 class="h5 fw-bold">Medical</h4>
@@ -268,7 +278,7 @@
                         <div
                             class="p-4 rounded-4 bg-black bg-opacity-50 border border-secondary border-opacity-10 h-100 reveal reveal-delay-200 hover-scale">
                             <div
-                                class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 p-3 rounded-circle mb-4 text-primary">
+                                class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 p-3 rounded-circle mb-4 text-white">
                                 <i class="bi bi-car-front fs-2"></i>
                             </div>
                             <h4 class="h5 fw-bold">Automotive</h4>
@@ -312,48 +322,60 @@
         <section class="py-5 bg-dark">
             <div class="container py-5">
                 <div class="text-center mb-5 reveal">
-                    <h2 class="fw-bold">Made in the Lab</h2>
-                    <p class="text-muted">Incredible projects built by our community members.</p>
+                    <h2 class="fw-bold text-white">Made in the Lab</h2>
+                    <p class="text-white-50">Incredible projects built by our community members.</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6">
-                        <div class="card border border-secondary border-opacity-25 h-100 reveal hover-scale">
+                        <div
+                            class="card bg-transparent border border-secondary border-opacity-25 h-100 reveal hover-scale">
                             <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
                                 class="card-img-top" alt="Project 1" style="height: 200px; object-fit: cover;">
                             <div class="card-body">
                                 <span class="badge bg-primary mb-2">Game Dev</span>
-                                <h4 class="h5 fw-bold">Neon Cyber Run</h4>
-                                <p class="small text-muted mb-3">A high-speed parkour game developed by Team Kinetic
+                                <h4 class="h5 fw-bold" style="color: #ffffff !important;">Neon Cyber Run</h4>
+                                <p class="small mb-3" style="color: rgba(255,255,255,0.7) !important;">A high-speed
+                                    parkour game developed by Team Kinetic
                                     using our motion capture rig.</p>
-                                <a href="#" class="btn btn-sm btn-outline-light stretched-link">View Case Study</a>
+                                <div class="text-center">
+                                    <a href="#" class="btn btn-sm btn-outline-light stretched-link">View Case Study</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div
-                            class="card border border-secondary border-opacity-25 h-100 reveal reveal-delay-200 hover-scale">
+                            class="card bg-transparent border border-secondary border-opacity-25 h-100 reveal reveal-delay-200 hover-scale">
                             <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop"
                                 class="card-img-top" alt="Project 2" style="height: 200px; object-fit: cover;">
                             <div class="card-body">
                                 <span class="badge bg-success mb-2">Education</span>
-                                <h4 class="h5 fw-bold">Anatomy VR</h4>
-                                <p class="small text-muted mb-3">Interactive human body explorer for medical students,
+                                <h4 class="h5 fw-bold" style="color: #ffffff !important;">Anatomy VR</h4>
+                                <p class="small mb-3" style="color: rgba(255,255,255,0.7) !important;">Interactive human
+                                    body explorer for medical
+                                    students,
                                     created by Dr. Aris.</p>
-                                <a href="#" class="btn btn-sm btn-outline-light stretched-link">View Case Study</a>
+                                <div class="text-center">
+                                    <a href="#" class="btn btn-sm btn-outline-light stretched-link">View Case Study</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div
-                            class="card border border-secondary border-opacity-25 h-100 reveal reveal-delay-300 hover-scale">
+                            class="card bg-transparent border border-secondary border-opacity-25 h-100 reveal reveal-delay-300 hover-scale">
                             <img src="https://cdn.mos.cms.futurecdn.net/dE5hf5UKohcCC7FVgjqr9e.jpg" class="card-img-top"
                                 alt="Project 3" style="height: 200px; object-fit: cover;">
                             <div class="card-body">
                                 <span class="badge bg-info mb-2">Art</span>
-                                <h4 class="h5 fw-bold">Void Sculptures</h4>
-                                <p class="small text-muted mb-3">Abstract 3D art exhibition hosted entirely in VRChat,
+                                <h4 class="h5 fw-bold" style="color: #ffffff !important;">Void Sculptures</h4>
+                                <p class="small mb-3" style="color: rgba(255,255,255,0.7) !important;">Abstract 3D art
+                                    exhibition hosted entirely in
+                                    VRChat,
                                     designed in our lab.</p>
-                                <a href="#" class="btn btn-sm btn-outline-light stretched-link">View Gallery</a>
+                                <div class="text-center">
+                                    <a href="#" class="btn btn-sm btn-outline-light stretched-link">View Gallery</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -633,6 +655,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" title="Go to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
