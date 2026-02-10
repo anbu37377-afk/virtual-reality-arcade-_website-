@@ -69,9 +69,17 @@
             line-height: 1;
         }
 
-        .brand-link strong {
+        .brand-link span {
             color: var(--primary);
             font-weight: 700;
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, #8c52ff, #00e5ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
         }
 
         .auth-card {
@@ -256,8 +264,8 @@
     <main class="auth-shell">
         <div class="auth-wrap">
             <a href="index.html" class="brand-link" aria-label="Go to home page">
-                <i class="bi bi-headset-vr"></i>
-                <span>VR <strong>ARCADE</strong></span>
+                <i class="bi bi-headset-vr text-gradient"></i>
+                VR <span>ARCADE</span>
             </a>
 
             <section class="auth-card" aria-labelledby="loginTitle">
