@@ -1,4 +1,9 @@
-/* FIXED HEADER SOLUTION - FINAL V5 (INTERACTION FIX) */
+/* FIXED HEADER SOLUTION - FINAL V6 (SCROLLBAR FIX) */
+
+/* 0. SCROLLBAR OVERLAP FIX */
+html {
+    scrollbar-gutter: stable;
+}
 
 /* 1. RESET & SAFETY */
 header,

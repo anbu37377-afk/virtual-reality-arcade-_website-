@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fixed-header.css">
 </head>
 
 <body>
@@ -125,16 +126,66 @@
                 <p class="lead pricing-hero-subtitle mb-0">Pay per hour or get a membership for unlimited fun.</p>
 
                 <!-- Pricing Toggle -->
-                <div class="d-flex justify-content-center align-items-center mt-4">
-                    <span class="text-white me-3">Hourly</span>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="billingSwitch"
-                            style="transform: scale(1.5);">
+                <div class="pricing-toggle-wrapper d-flex justify-content-center align-items-center mt-4">
+                    <span class="toggle-label text-white me-3" id="label-hourly">Hourly</span>
+                    <div class="form-check form-switch pricing-switch-container mb-0">
+                        <input class="form-check-input" type="checkbox" id="billingSwitch">
                     </div>
-                    <span class="text-muted ms-3">Membership (Save 20%)</span>
+                    <span class="toggle-label text-muted ms-3" id="label-membership">Membership (Save 20%)</span>
                 </div>
             </div>
         </section>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const billingSwitch = document.getElementById('billingSwitch');
+                const hourlyLabel = document.getElementById('label-hourly');
+                const membershipLabel = document.getElementById('label-membership');
+
+                const prices = {
+                    starter: { hourly: '$20', monthly: '$49' },
+                    gamer: { hourly: '$35', monthly: '$99' },
+                    vip: { hourly: '$50', monthly: '$199' }
+                };
+
+                const planCards = document.querySelectorAll('.pricing-plan-card');
+
+                if (billingSwitch) {
+                    billingSwitch.addEventListener('change', function () {
+                        const isMembership = this.checked;
+
+                        // Update text colors
+                        if (isMembership) {
+                            membershipLabel.classList.remove('text-muted');
+                            membershipLabel.classList.add('text-white');
+                            hourlyLabel.classList.add('text-muted');
+                            hourlyLabel.classList.remove('text-white');
+                        } else {
+                            hourlyLabel.classList.remove('text-muted');
+                            hourlyLabel.classList.add('text-white');
+                            membershipLabel.classList.add('text-muted');
+                            membershipLabel.classList.remove('text-white');
+                        }
+
+                        // Update prices
+                        const priceElements = document.querySelectorAll('.display-4.fw-bold');
+                        priceElements[0].innerHTML = (isMembership ? prices.starter.monthly : prices.starter.hourly) + '<span class="fs-6 text-muted">/' + (isMembership ? 'month' : 'hour') + '</span>';
+                        priceElements[1].innerHTML = (isMembership ? prices.gamer.monthly : prices.gamer.hourly) + '<span class="fs-6 text-muted">/' + (isMembership ? 'month' : 'hour') + '</span>';
+                        priceElements[2].innerHTML = (isMembership ? prices.vip.monthly : prices.vip.hourly) + '<span class="fs-6 text-muted">/' + (isMembership ? 'month' : 'hour') + '</span>';
+                    });
+
+                    // Make labels clickable
+                    hourlyLabel.addEventListener('click', () => {
+                        billingSwitch.checked = false;
+                        billingSwitch.dispatchEvent(new Event('change'));
+                    });
+                    membershipLabel.addEventListener('click', () => {
+                        billingSwitch.checked = true;
+                        billingSwitch.dispatchEvent(new Event('change'));
+                    });
+                }
+            });
+        </script>
 
         <!-- Pricing Cards -->
         <section class="py-5 pricing-plans-section">
