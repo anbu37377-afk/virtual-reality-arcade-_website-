@@ -1404,7 +1404,7 @@ a {
    ========================================= */
 .hero-section {
     padding: 60px 0;
-    background: linear-gradient(135deg, rgba(11, 12, 21, 0.82), rgba(140, 82, 255, 0.25)), url('https://images.ctfassets.net/3dar4x4x74wk/4ybhyhyOS1G0ffJlAIaWRm/6fe1dabc24001dadeb6e6dba94e69f02/VR.jpg');
+    background: linear-gradient(135deg, rgba(11, 12, 21, 0.85), rgba(140, 82, 255, 0.3)), url('../images/hero-bg.png');
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: center center !important;
@@ -1416,7 +1416,7 @@ a {
 }
 
 [data-bs-theme="light"] .hero-section {
-    background: linear-gradient(135deg, rgba(248, 249, 250, 0.82), rgba(140, 82, 255, 0.25)), url('https://images.ctfassets.net/3dar4x4x74wk/4ybhyhyOS1G0ffJlAIaWRm/6fe1dabc24001dadeb6e6dba94e69f02/VR.jpg');
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.85), rgba(140, 82, 255, 0.3)), url('../images/hero-bg.png');
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: center center !important;
